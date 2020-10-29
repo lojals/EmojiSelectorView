@@ -5,7 +5,7 @@
 //  Created by Jorge R Ovalle Z on 4/7/18.
 //
 
-import Foundation
+import CoreGraphics
 
 extension CGRect {
 

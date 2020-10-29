@@ -1,16 +1,16 @@
 PODS:
-  - JOEmojiableBtn (0.1.0)
+  - JOEmojiableBtn (4.0.0)
 
 DEPENDENCIES:
   - JOEmojiableBtn (from `../`)
 
 EXTERNAL SOURCES:
   JOEmojiableBtn:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  JOEmojiableBtn: 1ef652edc21a9d4e3017c0c83cca15ea77e14e68
+  JOEmojiableBtn: 5b0aea14550fd5b2ebb3dac79cb51200dfb4e0da
 
-PODFILE CHECKSUM: 2904784b3c981a242494bc95638f2085aa5cb2ae
+PODFILE CHECKSUM: dd6b6b4e88f149e88bc90157ed66f11bae6bca04
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.8.4

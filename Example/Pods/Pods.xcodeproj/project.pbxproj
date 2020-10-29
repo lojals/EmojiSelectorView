@@ -7,123 +7,121 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24D0225618FD0C2D423B34573599908A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		29C9A81B02EFF8F226C4B0D054456579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		47BD04A2E880435DAC7AFF3A7F82B437 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4D62D198AB80265C73BF6E1E941A499C /* Pods-JOEmojiableBtn_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B3C65409D99CA6D0FD04ACF045E0F5 /* Pods-JOEmojiableBtn_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E58D39A30A61E94EC14AAA4B4BCB374 /* Pods-JOEmojiableBtn_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26850F20FB7EE60386DA1F8695BCC294 /* Pods-JOEmojiableBtn_Tests-dummy.m */; };
-		57E08C5E9968D46738B38F8BDC7E11C7 /* Pods-JOEmojiableBtn_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D2F3D8A683F020C37EA81403536E30 /* Pods-JOEmojiableBtn_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9EDEEC2CF65B7B8A1C01A1C3ACAC0394 /* JOEmojiableBtn-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D195C91849415F109B878BC72905D69 /* JOEmojiableBtn-dummy.m */; };
-		9F1E5E3BDBB41358A7607AE8AC785A36 /* JOEmojiableBtn-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB9486192E813C22ABA758B2BE3791 /* JOEmojiableBtn-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A689E54C6AA823EB1D49ECCF1491DC51 /* JOEmojiableBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76195A5439D090A14744F3C3CF69A9D9 /* JOEmojiableBtn.swift */; };
-		BD143B637C5C51F8AC56CA076A14A230 /* Pods-JOEmojiableBtn_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC0D3F3ADCA819A47B71BD59959D897 /* Pods-JOEmojiableBtn_Example-dummy.m */; };
-		CCB3A5D91CF1861B21E103AC7EFD7186 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5321AA841A248D4A97FB9D15BA801A82 /* SelectorView.swift */; };
-		DD262F8DCEE151B95B7EA7788EE5CB20 /* JOEmojiableBtn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 863D204CAAB248548C977D078842B4DC /* JOEmojiableBtn.bundle */; };
-		EC13235920784A2D00ED28B3 /* JOEmojiableOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13235820784A2D00ED28B3 /* JOEmojiableOption.swift */; };
-		EC13235B2079ABE100ED28B3 /* CGSize+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13235A2079ABE100ED28B3 /* CGSize+init.swift */; };
-		EC13235D2079AFB600ED28B3 /* CGRect+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13235C2079AFB600ED28B3 /* CGRect+init.swift */; };
-		EC13235F207EC2CB00ED28B3 /* JOEmojiableBtnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13235E207EC2CB00ED28B3 /* JOEmojiableBtnDelegate.swift */; };
-		ECA5B203207745E6000835F3 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5B202207745E6000835F3 /* InformationView.swift */; };
-		ECA5B2072077C9AC000835F3 /* JOEmojiableBtnConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA5B2062077C9AC000835F3 /* JOEmojiableBtnConfig.swift */; };
+		008F7440BE6EE4B6FB6F8D5D5E097ABB /* CGRect+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FF0282ED0024775F5DFFB59588BB0 /* CGRect+init.swift */; };
+		142B67B40E3CC4EA3CB4B680E56A250B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		23423346D108FE2315750AADB34B1BD7 /* JOEmojiableBtnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816947E6D01E4CB22C688F484A4DCD3 /* JOEmojiableBtnDelegate.swift */; };
+		26FFD44C320C62390BC88D4015C8F6CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		28B971608F8F09BF14966C27D66ADB1D /* JOEmojiableOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC94C062194E1A40FBADC5D0CCAE59E /* JOEmojiableOption.swift */; };
+		3C224D42E8A2DE362779427C9A9EF455 /* Pods-JOEmojiableBtn_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55741E2C111BD70A8FC2B289CD0B2371 /* Pods-JOEmojiableBtn_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C5B4ED28D60237D244757C7FE4B33E1 /* JOEmojiableBtn-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF3AC6D9F724EEEF47B08101A4DABC /* JOEmojiableBtn-dummy.m */; };
+		494F61CBFAB2C988F7E1EB80A32D9A0C /* JOEmojiableBtnConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0584DF14B33C1CB5DEE88FF36FC9E9 /* JOEmojiableBtnConfig.swift */; };
+		4D250939C82632360A581452BAA914F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		5B0BDAB1B83666245A003F5D89D45B81 /* JOEmojiableBtn-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 063AF6A468BB297C8C456842CF21B926 /* JOEmojiableBtn-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		777F479556E45B58A04BBF06B4010E36 /* Pods-JOEmojiableBtn_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C145001C28DC0040FB7785FA7FCB30D /* Pods-JOEmojiableBtn_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7889158E92102F47049680DA9CD079B8 /* Pods-JOEmojiableBtn_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BCCF84CCF2E947E12C55B24C1013E9 /* Pods-JOEmojiableBtn_Tests-dummy.m */; };
+		79748FEB2EC643DED46654DB40029C9B /* CGSize+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD17975304A98A1F5CB3D513FE094E1D /* CGSize+init.swift */; };
+		892786A1AA53A70C6096EA1DF7F38241 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470ED126EC42A9B03153EE17012408B /* InformationView.swift */; };
+		8DBF604DC537EF3E100EFFCCCB64678E /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59421228C8A2CC0E9673FF105B2EEB58 /* SelectorView.swift */; };
+		AE90FCC8E443E50F743E1F67251044BD /* Pods-JOEmojiableBtn_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C12120A6405CA17A520693A5DBC5E /* Pods-JOEmojiableBtn_Example-dummy.m */; };
+		B4539E6905395158FFF03E6EFD0B50CA /* JOEmojiableBtn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54CDD39D0CD4278D2769784F596730E5 /* JOEmojiableBtn.bundle */; };
+		D9EB51B68E4E9B50FE12DA86F20AE68B /* JOEmojiableBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14680E43A851C029F21146D905DF9F56 /* JOEmojiableBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6041186939742FA79043FF702076D094 /* PBXContainerItemProxy */ = {
+		16A6AF2207C3FA140E2EAB9F3A9AB5F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 80DF8BC19D5B5BE0305786F376349D98;
+			remoteGlobalIDString = 9A9A75B56D8F6ECFA56DCBB1A2B26F30;
 			remoteInfo = JOEmojiableBtn;
 		};
-		9D7ED9CB3771EB063D0DE32D1CC73A54 /* PBXContainerItemProxy */ = {
+		BB9AFB56DBA9235AD444EEC6B0A4B5EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 80DF8BC19D5B5BE0305786F376349D98;
-			remoteInfo = JOEmojiableBtn;
-		};
-		B76525880C116F28BF515057A7DDA904 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E65F9AB9BE247231E5D3F6A891429230;
+			remoteGlobalIDString = 779862FFC7C4596FE750524EAE2F2E7C;
 			remoteInfo = "JOEmojiableBtn-JOEmojiableBtn";
+		};
+		E2B3B93038B43C65B8D0DF8ED9E2AC4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A9A75B56D8F6ECFA56DCBB1A2B26F30;
+			remoteInfo = JOEmojiableBtn;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05C2D73B82E6E6ECCB268BC19A0EF95D /* Pods-JOEmojiableBtn_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOEmojiableBtn_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		07854A8A6C51CA3B44F15AE2BCE8E7F6 /* Pods-JOEmojiableBtn_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOEmojiableBtn_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		098C5743C328379FE9CE0A53E24C5C84 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		19C1A67B5DDB335614E9086546E10556 /* Pods-JOEmojiableBtn_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOEmojiableBtn_Example-frameworks.sh"; sourceTree = "<group>"; };
-		243D02936CE6F1EFB3B9F4FFF3FE97B6 /* Pods_JOEmojiableBtn_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOEmojiableBtn_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		26850F20FB7EE60386DA1F8695BCC294 /* Pods-JOEmojiableBtn_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOEmojiableBtn_Tests-dummy.m"; sourceTree = "<group>"; };
-		32B3C65409D99CA6D0FD04ACF045E0F5 /* Pods-JOEmojiableBtn_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOEmojiableBtn_Tests-umbrella.h"; sourceTree = "<group>"; };
-		33BBCE8B8D52D69B90D0B25DF7A4D55A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38DB9486192E813C22ABA758B2BE3791 /* JOEmojiableBtn-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JOEmojiableBtn-umbrella.h"; sourceTree = "<group>"; };
-		3FF6A63A16222419FDB2614BC6904BA6 /* JOEmojiableBtn.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = JOEmojiableBtn.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		47FABC7ADF04FB4319EA59713A487CA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4825D25E84ACDA478F2421DA87763F2A /* JOEmojiableBtn.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JOEmojiableBtn.modulemap; sourceTree = "<group>"; };
-		4996F25074C22FB2A5DCAB2A70FC2A7F /* Pods-JOEmojiableBtn_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOEmojiableBtn_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4D195C91849415F109B878BC72905D69 /* JOEmojiableBtn-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JOEmojiableBtn-dummy.m"; sourceTree = "<group>"; };
-		5321AA841A248D4A97FB9D15BA801A82 /* SelectorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorView.swift; path = Pod/Classes/SelectorView.swift; sourceTree = "<group>"; };
-		59301347001AACBFBFE876E8C650A818 /* Pods-JOEmojiableBtn_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOEmojiableBtn_Tests.modulemap"; sourceTree = "<group>"; };
-		5EB0766AEDA74BB0E2522C6D31359B01 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5EFE3DC7E67263BE5A39AE413432EE47 /* Pods-JOEmojiableBtn_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOEmojiableBtn_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		65DF7225A02A618DC99968E8A3A1CC4D /* JOEmojiableBtn.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JOEmojiableBtn.xcconfig; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		76195A5439D090A14744F3C3CF69A9D9 /* JOEmojiableBtn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOEmojiableBtn.swift; path = Pod/Classes/JOEmojiableBtn.swift; sourceTree = "<group>"; };
-		80DFAA07D592CA151D7C1DB78318BDDE /* Pods_JOEmojiableBtn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOEmojiableBtn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		863D204CAAB248548C977D078842B4DC /* JOEmojiableBtn.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JOEmojiableBtn.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E49405B69E3D0FF5DBB94D0B10C9515 /* Pods-JOEmojiableBtn_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Example.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		958717303CC8D5E42390F89AE265B536 /* Pods-JOEmojiableBtn_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOEmojiableBtn_Example-resources.sh"; sourceTree = "<group>"; };
-		95F7C27CA9C73C7C1859149DF88DF243 /* JOEmojiableBtn-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JOEmojiableBtn-prefix.pch"; sourceTree = "<group>"; };
-		98D392355DBC72A5BDB606D261FF08A6 /* JOEmojiableBtn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JOEmojiableBtn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1750B91408820CAC703199D5A3734D9 /* ResourceBundle-JOEmojiableBtn-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JOEmojiableBtn-Info.plist"; sourceTree = "<group>"; };
-		B4D2F3D8A683F020C37EA81403536E30 /* Pods-JOEmojiableBtn_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOEmojiableBtn_Example-umbrella.h"; sourceTree = "<group>"; };
-		B7AB44CB26113ED1D8FF54CD5DB15C45 /* Pods-JOEmojiableBtn_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BB3D0F83DFAFFE603C0AF18ED0CBE233 /* Pods-JOEmojiableBtn_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOEmojiableBtn_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		BDAD5E8AE44AA87D980846804A1F855F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C203221D92FD86644EA4091821C9B91F /* Pods-JOEmojiableBtn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DCA70C4DE120236716DB226B73B0862B /* Pods-JOEmojiableBtn_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOEmojiableBtn_Example.modulemap"; sourceTree = "<group>"; };
-		EBC0D3F3ADCA819A47B71BD59959D897 /* Pods-JOEmojiableBtn_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOEmojiableBtn_Example-dummy.m"; sourceTree = "<group>"; };
-		EC13235820784A2D00ED28B3 /* JOEmojiableOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JOEmojiableOption.swift; path = Pod/Classes/JOEmojiableOption.swift; sourceTree = "<group>"; };
-		EC13235A2079ABE100ED28B3 /* CGSize+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGSize+init.swift"; path = "Pod/Classes/CGSize+init.swift"; sourceTree = "<group>"; };
-		EC13235C2079AFB600ED28B3 /* CGRect+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGRect+init.swift"; path = "Pod/Classes/CGRect+init.swift"; sourceTree = "<group>"; };
-		EC13235E207EC2CB00ED28B3 /* JOEmojiableBtnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JOEmojiableBtnDelegate.swift; path = Pod/Classes/JOEmojiableBtnDelegate.swift; sourceTree = "<group>"; };
-		ECA5B202207745E6000835F3 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InformationView.swift; path = Pod/Classes/InformationView.swift; sourceTree = "<group>"; };
-		ECA5B2062077C9AC000835F3 /* JOEmojiableBtnConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JOEmojiableBtnConfig.swift; path = Pod/Classes/JOEmojiableBtnConfig.swift; sourceTree = "<group>"; };
-		F00051A5D2A65BFAA2F547AA10427E30 /* Pods-JOEmojiableBtn_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOEmojiableBtn_Tests-resources.sh"; sourceTree = "<group>"; };
-		FB980683F11EE32F305A191FF31928E1 /* Pods-JOEmojiableBtn_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		063AF6A468BB297C8C456842CF21B926 /* JOEmojiableBtn-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JOEmojiableBtn-umbrella.h"; sourceTree = "<group>"; };
+		06ED084E42539E79F259F3C58D3902E9 /* JOEmojiableBtn.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JOEmojiableBtn.modulemap; sourceTree = "<group>"; };
+		0DC94C062194E1A40FBADC5D0CCAE59E /* JOEmojiableOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOEmojiableOption.swift; path = Pod/Classes/JOEmojiableOption.swift; sourceTree = "<group>"; };
+		0E1FF0282ED0024775F5DFFB59588BB0 /* CGRect+init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+init.swift"; path = "Pod/Classes/CGRect+init.swift"; sourceTree = "<group>"; };
+		14680E43A851C029F21146D905DF9F56 /* JOEmojiableBtn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOEmojiableBtn.swift; path = Pod/Classes/JOEmojiableBtn.swift; sourceTree = "<group>"; };
+		14F4C3BB5CD47350F607ED76BBEE9C11 /* Pods-JOEmojiableBtn_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOEmojiableBtn_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1806B058C5DF61473DF03A995F6B8E0C /* ResourceBundle-JOEmojiableBtn-JOEmojiableBtn-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-JOEmojiableBtn-JOEmojiableBtn-Info.plist"; sourceTree = "<group>"; };
+		217C64A2EB3B39D2FE68524400F865CA /* JOEmojiableBtn.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JOEmojiableBtn.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		21CF23AB3965FAE6DCA1F875EB06E3FA /* JOEmojiableBtn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JOEmojiableBtn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27AD94F011F58EF3EE95DA2FA8018CE2 /* JOEmojiableBtn.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JOEmojiableBtn.xcconfig; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		36E73268AD12E7E29C0EAE00C5A917F8 /* JOEmojiableBtn-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JOEmojiableBtn-prefix.pch"; sourceTree = "<group>"; };
+		3BD7C4754530350C86F932CEF8E4E4DE /* Pods-JOEmojiableBtn_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOEmojiableBtn_Example-Info.plist"; sourceTree = "<group>"; };
+		3C145001C28DC0040FB7785FA7FCB30D /* Pods-JOEmojiableBtn_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOEmojiableBtn_Example-umbrella.h"; sourceTree = "<group>"; };
+		3CD522133F27ED34247C8A14A619B5BB /* Pods-JOEmojiableBtn_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOEmojiableBtn_Example.modulemap"; sourceTree = "<group>"; };
+		46461DF63688998006189C070FE0612C /* Pods-JOEmojiableBtn_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOEmojiableBtn_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4DB81882AA610837B881A3153BFE921F /* Pods_JOEmojiableBtn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOEmojiableBtn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54CDD39D0CD4278D2769784F596730E5 /* JOEmojiableBtn.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JOEmojiableBtn.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		55741E2C111BD70A8FC2B289CD0B2371 /* Pods-JOEmojiableBtn_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JOEmojiableBtn_Tests-umbrella.h"; sourceTree = "<group>"; };
+		59421228C8A2CC0E9673FF105B2EEB58 /* SelectorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorView.swift; path = Pod/Classes/SelectorView.swift; sourceTree = "<group>"; };
+		60525BA70ABDDB7481D18EC977C8F18E /* Pods-JOEmojiableBtn_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOEmojiableBtn_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7BFF3AC6D9F724EEEF47B08101A4DABC /* JOEmojiableBtn-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JOEmojiableBtn-dummy.m"; sourceTree = "<group>"; };
+		7E83B27D98C0F79AF34BB8497A010352 /* Pods-JOEmojiableBtn_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOEmojiableBtn_Tests-Info.plist"; sourceTree = "<group>"; };
+		87BCCF84CCF2E947E12C55B24C1013E9 /* Pods-JOEmojiableBtn_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOEmojiableBtn_Tests-dummy.m"; sourceTree = "<group>"; };
+		8816947E6D01E4CB22C688F484A4DCD3 /* JOEmojiableBtnDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOEmojiableBtnDelegate.swift; path = Pod/Classes/JOEmojiableBtnDelegate.swift; sourceTree = "<group>"; };
+		8A9BCC673826BA3E8165BDE3BA4FF24F /* JOEmojiableBtn-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JOEmojiableBtn-Info.plist"; sourceTree = "<group>"; };
+		8C5C12120A6405CA17A520693A5DBC5E /* Pods-JOEmojiableBtn_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JOEmojiableBtn_Example-dummy.m"; sourceTree = "<group>"; };
+		919C4F519D05546685B4FB459B474D27 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F8A1F9DADE62BB5FC75241C19D62CE7 /* Pods-JOEmojiableBtn_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JOEmojiableBtn_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A470ED126EC42A9B03153EE17012408B /* InformationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InformationView.swift; path = Pod/Classes/InformationView.swift; sourceTree = "<group>"; };
+		B05C9D60C6F5F988F4F9A9389FEF9836 /* Pods_JOEmojiableBtn_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JOEmojiableBtn_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA61063D1F1F1BCEF1D69BC93A5FE6F7 /* Pods-JOEmojiableBtn_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C462C816BEE7705C2431999DB009A04C /* Pods-JOEmojiableBtn_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA4EB366C754CD8D3F248527995873A6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F09F7765DBD24B646BBE2D670C2B6F66 /* Pods-JOEmojiableBtn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F48B12879DE641B59086AE0FBD1F661B /* Pods-JOEmojiableBtn_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JOEmojiableBtn_Tests.modulemap"; sourceTree = "<group>"; };
+		F9FA6BC47683AD5B9F8628B5061A6A22 /* Pods-JOEmojiableBtn_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JOEmojiableBtn_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FD17975304A98A1F5CB3D513FE094E1D /* CGSize+init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+init.swift"; path = "Pod/Classes/CGSize+init.swift"; sourceTree = "<group>"; };
+		FEEF653EAEA2368E4168137838284F88 /* Pods-JOEmojiableBtn_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JOEmojiableBtn_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF0584DF14B33C1CB5DEE88FF36FC9E9 /* JOEmojiableBtnConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOEmojiableBtnConfig.swift; path = Pod/Classes/JOEmojiableBtnConfig.swift; sourceTree = "<group>"; };
+		FF6B5E5B23A740907DBD180B35BEDCEC /* Pods-JOEmojiableBtn_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JOEmojiableBtn_Tests-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47DD3D61B7832F722655330356C782AB /* Frameworks */ = {
+		77EAB5008BA65B5E1BB4C5649A4A3AB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D0225618FD0C2D423B34573599908A /* Foundation.framework in Frameworks */,
+				26FFD44C320C62390BC88D4015C8F6CB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D8877E46D372EC09F6F66C7CDB1EF88 /* Frameworks */ = {
+		86D8E37AEEF478F9D1D495476326A74D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29C9A81B02EFF8F226C4B0D054456579 /* Foundation.framework in Frameworks */,
+				4D250939C82632360A581452BAA914F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DF621659CD90F6854BD6F024A40CC33 /* Frameworks */ = {
+		E07AFAE81DE436BC095A9401E576EEDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47BD04A2E880435DAC7AFF3A7F82B437 /* Foundation.framework in Frameworks */,
+				142B67B40E3CC4EA3CB4B680E56A250B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E263B7691B9E176E37F0731C5D9E32D0 /* Frameworks */ = {
+		E2E204881CA14D7BB4875740805689A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,232 +131,175 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		015860727A4946599A79F565F10F935C /* Pod */ = {
+		0FE16B565B10F421C5E0681A8A7BBD36 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3FF6A63A16222419FDB2614BC6904BA6 /* JOEmojiableBtn.podspec */,
-				5EB0766AEDA74BB0E2522C6D31359B01 /* LICENSE */,
-				098C5743C328379FE9CE0A53E24C5C84 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		025E2D1EA0094D1DBAD310D63A3084F4 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				896737AB7F3B8B1E5E96B81BC1CB7FA1 /* JOEmojiableBtn */,
+				BE6E59A91902F7CC27F64494435F5F66 /* JOEmojiableBtn */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		44BF6E30216905CC5C7D3207F35DD8B3 /* Targets Support Files */ = {
+		17E440CEAC48BB0166DC43C4F83D7ECB /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				CD4C1B0C65D5F0200A5E0913B980EE2E /* Pods-JOEmojiableBtn_Example */,
-				B45B0E26E4242028E4C5747AD1D1EF39 /* Pods-JOEmojiableBtn_Tests */,
+				217C64A2EB3B39D2FE68524400F865CA /* JOEmojiableBtn.podspec */,
+				DA4EB366C754CD8D3F248527995873A6 /* LICENSE */,
+				919C4F519D05546685B4FB459B474D27 /* README.md */,
 			);
-			name = "Targets Support Files";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		51685725557AFC9A4ADA6F327143C80B /* Products */ = {
+		27E3BE92BDF7856E54C3A9EE706F4948 /* Pods-JOEmojiableBtn_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				863D204CAAB248548C977D078842B4DC /* JOEmojiableBtn.bundle */,
-				98D392355DBC72A5BDB606D261FF08A6 /* JOEmojiableBtn.framework */,
-				243D02936CE6F1EFB3B9F4FFF3FE97B6 /* Pods_JOEmojiableBtn_Example.framework */,
-				80DFAA07D592CA151D7C1DB78318BDDE /* Pods_JOEmojiableBtn_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		63FE8ACD6B2862F7636B4BEA14F0BA15 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				33BBCE8B8D52D69B90D0B25DF7A4D55A /* Info.plist */,
-				4825D25E84ACDA478F2421DA87763F2A /* JOEmojiableBtn.modulemap */,
-				65DF7225A02A618DC99968E8A3A1CC4D /* JOEmojiableBtn.xcconfig */,
-				4D195C91849415F109B878BC72905D69 /* JOEmojiableBtn-dummy.m */,
-				95F7C27CA9C73C7C1859149DF88DF243 /* JOEmojiableBtn-prefix.pch */,
-				38DB9486192E813C22ABA758B2BE3791 /* JOEmojiableBtn-umbrella.h */,
-				A1750B91408820CAC703199D5A3734D9 /* ResourceBundle-JOEmojiableBtn-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JOEmojiableBtn";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				025E2D1EA0094D1DBAD310D63A3084F4 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				51685725557AFC9A4ADA6F327143C80B /* Products */,
-				44BF6E30216905CC5C7D3207F35DD8B3 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		896737AB7F3B8B1E5E96B81BC1CB7FA1 /* JOEmojiableBtn */ = {
-			isa = PBXGroup;
-			children = (
-				EC13235C2079AFB600ED28B3 /* CGRect+init.swift */,
-				EC13235A2079ABE100ED28B3 /* CGSize+init.swift */,
-				EC13235820784A2D00ED28B3 /* JOEmojiableOption.swift */,
-				ECA5B2062077C9AC000835F3 /* JOEmojiableBtnConfig.swift */,
-				76195A5439D090A14744F3C3CF69A9D9 /* JOEmojiableBtn.swift */,
-				EC13235E207EC2CB00ED28B3 /* JOEmojiableBtnDelegate.swift */,
-				ECA5B202207745E6000835F3 /* InformationView.swift */,
-				5321AA841A248D4A97FB9D15BA801A82 /* SelectorView.swift */,
-				015860727A4946599A79F565F10F935C /* Pod */,
-				63FE8ACD6B2862F7636B4BEA14F0BA15 /* Support Files */,
-			);
-			name = JOEmojiableBtn;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		B45B0E26E4242028E4C5747AD1D1EF39 /* Pods-JOEmojiableBtn_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BDAD5E8AE44AA87D980846804A1F855F /* Info.plist */,
-				59301347001AACBFBFE876E8C650A818 /* Pods-JOEmojiableBtn_Tests.modulemap */,
-				07854A8A6C51CA3B44F15AE2BCE8E7F6 /* Pods-JOEmojiableBtn_Tests-acknowledgements.markdown */,
-				4996F25074C22FB2A5DCAB2A70FC2A7F /* Pods-JOEmojiableBtn_Tests-acknowledgements.plist */,
-				26850F20FB7EE60386DA1F8695BCC294 /* Pods-JOEmojiableBtn_Tests-dummy.m */,
-				BB3D0F83DFAFFE603C0AF18ED0CBE233 /* Pods-JOEmojiableBtn_Tests-frameworks.sh */,
-				F00051A5D2A65BFAA2F547AA10427E30 /* Pods-JOEmojiableBtn_Tests-resources.sh */,
-				32B3C65409D99CA6D0FD04ACF045E0F5 /* Pods-JOEmojiableBtn_Tests-umbrella.h */,
-				B7AB44CB26113ED1D8FF54CD5DB15C45 /* Pods-JOEmojiableBtn_Tests.debug.xcconfig */,
-				C203221D92FD86644EA4091821C9B91F /* Pods-JOEmojiableBtn_Tests.release.xcconfig */,
+				F48B12879DE641B59086AE0FBD1F661B /* Pods-JOEmojiableBtn_Tests.modulemap */,
+				14F4C3BB5CD47350F607ED76BBEE9C11 /* Pods-JOEmojiableBtn_Tests-acknowledgements.markdown */,
+				60525BA70ABDDB7481D18EC977C8F18E /* Pods-JOEmojiableBtn_Tests-acknowledgements.plist */,
+				87BCCF84CCF2E947E12C55B24C1013E9 /* Pods-JOEmojiableBtn_Tests-dummy.m */,
+				FF6B5E5B23A740907DBD180B35BEDCEC /* Pods-JOEmojiableBtn_Tests-frameworks.sh */,
+				7E83B27D98C0F79AF34BB8497A010352 /* Pods-JOEmojiableBtn_Tests-Info.plist */,
+				55741E2C111BD70A8FC2B289CD0B2371 /* Pods-JOEmojiableBtn_Tests-umbrella.h */,
+				C462C816BEE7705C2431999DB009A04C /* Pods-JOEmojiableBtn_Tests.debug.xcconfig */,
+				F09F7765DBD24B646BBE2D670C2B6F66 /* Pods-JOEmojiableBtn_Tests.release.xcconfig */,
 			);
 			name = "Pods-JOEmojiableBtn_Tests";
 			path = "Target Support Files/Pods-JOEmojiableBtn_Tests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		2F25DCA8176ACFA0ED658E94436DFB58 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				BC3675D7D64D1A070B270C06B27C4C1D /* Pods-JOEmojiableBtn_Example */,
+				27E3BE92BDF7856E54C3A9EE706F4948 /* Pods-JOEmojiableBtn_Tests */,
 			);
-			name = Frameworks;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CD4C1B0C65D5F0200A5E0913B980EE2E /* Pods-JOEmojiableBtn_Example */ = {
+		B2E228B7E77E6FA60EB2F7B74FA772BD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				47FABC7ADF04FB4319EA59713A487CA0 /* Info.plist */,
-				DCA70C4DE120236716DB226B73B0862B /* Pods-JOEmojiableBtn_Example.modulemap */,
-				05C2D73B82E6E6ECCB268BC19A0EF95D /* Pods-JOEmojiableBtn_Example-acknowledgements.markdown */,
-				5EFE3DC7E67263BE5A39AE413432EE47 /* Pods-JOEmojiableBtn_Example-acknowledgements.plist */,
-				EBC0D3F3ADCA819A47B71BD59959D897 /* Pods-JOEmojiableBtn_Example-dummy.m */,
-				19C1A67B5DDB335614E9086546E10556 /* Pods-JOEmojiableBtn_Example-frameworks.sh */,
-				958717303CC8D5E42390F89AE265B536 /* Pods-JOEmojiableBtn_Example-resources.sh */,
-				B4D2F3D8A683F020C37EA81403536E30 /* Pods-JOEmojiableBtn_Example-umbrella.h */,
-				FB980683F11EE32F305A191FF31928E1 /* Pods-JOEmojiableBtn_Example.debug.xcconfig */,
-				8E49405B69E3D0FF5DBB94D0B10C9515 /* Pods-JOEmojiableBtn_Example.release.xcconfig */,
+				06ED084E42539E79F259F3C58D3902E9 /* JOEmojiableBtn.modulemap */,
+				27AD94F011F58EF3EE95DA2FA8018CE2 /* JOEmojiableBtn.xcconfig */,
+				7BFF3AC6D9F724EEEF47B08101A4DABC /* JOEmojiableBtn-dummy.m */,
+				8A9BCC673826BA3E8165BDE3BA4FF24F /* JOEmojiableBtn-Info.plist */,
+				36E73268AD12E7E29C0EAE00C5A917F8 /* JOEmojiableBtn-prefix.pch */,
+				063AF6A468BB297C8C456842CF21B926 /* JOEmojiableBtn-umbrella.h */,
+				1806B058C5DF61473DF03A995F6B8E0C /* ResourceBundle-JOEmojiableBtn-JOEmojiableBtn-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JOEmojiableBtn";
+			sourceTree = "<group>";
+		};
+		BC3675D7D64D1A070B270C06B27C4C1D /* Pods-JOEmojiableBtn_Example */ = {
+			isa = PBXGroup;
+			children = (
+				3CD522133F27ED34247C8A14A619B5BB /* Pods-JOEmojiableBtn_Example.modulemap */,
+				FEEF653EAEA2368E4168137838284F88 /* Pods-JOEmojiableBtn_Example-acknowledgements.markdown */,
+				9F8A1F9DADE62BB5FC75241C19D62CE7 /* Pods-JOEmojiableBtn_Example-acknowledgements.plist */,
+				8C5C12120A6405CA17A520693A5DBC5E /* Pods-JOEmojiableBtn_Example-dummy.m */,
+				46461DF63688998006189C070FE0612C /* Pods-JOEmojiableBtn_Example-frameworks.sh */,
+				3BD7C4754530350C86F932CEF8E4E4DE /* Pods-JOEmojiableBtn_Example-Info.plist */,
+				3C145001C28DC0040FB7785FA7FCB30D /* Pods-JOEmojiableBtn_Example-umbrella.h */,
+				BA61063D1F1F1BCEF1D69BC93A5FE6F7 /* Pods-JOEmojiableBtn_Example.debug.xcconfig */,
+				F9FA6BC47683AD5B9F8628B5061A6A22 /* Pods-JOEmojiableBtn_Example.release.xcconfig */,
 			);
 			name = "Pods-JOEmojiableBtn_Example";
 			path = "Target Support Files/Pods-JOEmojiableBtn_Example";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		BE6E59A91902F7CC27F64494435F5F66 /* JOEmojiableBtn */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				0E1FF0282ED0024775F5DFFB59588BB0 /* CGRect+init.swift */,
+				FD17975304A98A1F5CB3D513FE094E1D /* CGSize+init.swift */,
+				A470ED126EC42A9B03153EE17012408B /* InformationView.swift */,
+				14680E43A851C029F21146D905DF9F56 /* JOEmojiableBtn.swift */,
+				FF0584DF14B33C1CB5DEE88FF36FC9E9 /* JOEmojiableBtnConfig.swift */,
+				8816947E6D01E4CB22C688F484A4DCD3 /* JOEmojiableBtnDelegate.swift */,
+				0DC94C062194E1A40FBADC5D0CCAE59E /* JOEmojiableOption.swift */,
+				59421228C8A2CC0E9673FF105B2EEB58 /* SelectorView.swift */,
+				17E440CEAC48BB0166DC43C4F83D7ECB /* Pod */,
+				B2E228B7E77E6FA60EB2F7B74FA772BD /* Support Files */,
+			);
+			name = JOEmojiableBtn;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C0BE20CC3D5D9E0ABCA0E4AD42C9036E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54CDD39D0CD4278D2769784F596730E5 /* JOEmojiableBtn.bundle */,
+				21CF23AB3965FAE6DCA1F875EB06E3FA /* JOEmojiableBtn.framework */,
+				B05C9D60C6F5F988F4F9A9389FEF9836 /* Pods_JOEmojiableBtn_Example.framework */,
+				4DB81882AA610837B881A3153BFE921F /* Pods_JOEmojiableBtn_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0FE16B565B10F421C5E0681A8A7BBD36 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				C0BE20CC3D5D9E0ABCA0E4AD42C9036E /* Products */,
+				2F25DCA8176ACFA0ED658E94436DFB58 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2A317C6708805199EAB610675F8FA180 /* Headers */ = {
+		3F90CE67756CDA8B66650A197ABE4582 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D62D198AB80265C73BF6E1E941A499C /* Pods-JOEmojiableBtn_Tests-umbrella.h in Headers */,
+				3C224D42E8A2DE362779427C9A9EF455 /* Pods-JOEmojiableBtn_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31550DCFCE8CD22794299DEF6F986A87 /* Headers */ = {
+		860F85979B8B148541BDC6F14B799195 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E08C5E9968D46738B38F8BDC7E11C7 /* Pods-JOEmojiableBtn_Example-umbrella.h in Headers */,
+				5B0BDAB1B83666245A003F5D89D45B81 /* JOEmojiableBtn-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66457F3566007348AB86856E3B954FCA /* Headers */ = {
+		DA4E2F6DFBF60C5372914B3C451EC81A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1E5E3BDBB41358A7607AE8AC785A36 /* JOEmojiableBtn-umbrella.h in Headers */,
+				777F479556E45B58A04BBF06B4010E36 /* Pods-JOEmojiableBtn_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D4EFD468A3811E3BF9D09EF83DCAE07 /* Pods-JOEmojiableBtn_Example */ = {
+		779862FFC7C4596FE750524EAE2F2E7C /* JOEmojiableBtn-JOEmojiableBtn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BAD510050B96D52DF8F720525D54438 /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Example" */;
+			buildConfigurationList = F3685C54D8620D763CBD6AB8D9BB8241 /* Build configuration list for PBXNativeTarget "JOEmojiableBtn-JOEmojiableBtn" */;
 			buildPhases = (
-				8A4D6603A7D9DB2A06F4214ACF816C7A /* Sources */,
-				47DD3D61B7832F722655330356C782AB /* Frameworks */,
-				31550DCFCE8CD22794299DEF6F986A87 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B4DF0A1350FA8D35E3862FCEA6C5DE36 /* PBXTargetDependency */,
-			);
-			name = "Pods-JOEmojiableBtn_Example";
-			productName = "Pods-JOEmojiableBtn_Example";
-			productReference = 243D02936CE6F1EFB3B9F4FFF3FE97B6 /* Pods_JOEmojiableBtn_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		220D629398D110456C833564970A8B10 /* Pods-JOEmojiableBtn_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 29ACA7A012C6EEF70BB08E0320FBA41B /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Tests" */;
-			buildPhases = (
-				33825A70C3F4BBE5DEF706DA7BD3CDF0 /* Sources */,
-				8D8877E46D372EC09F6F66C7CDB1EF88 /* Frameworks */,
-				2A317C6708805199EAB610675F8FA180 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DC6E4E6329F04EFA882A53CC1213627C /* PBXTargetDependency */,
-			);
-			name = "Pods-JOEmojiableBtn_Tests";
-			productName = "Pods-JOEmojiableBtn_Tests";
-			productReference = 80DFAA07D592CA151D7C1DB78318BDDE /* Pods_JOEmojiableBtn_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		80DF8BC19D5B5BE0305786F376349D98 /* JOEmojiableBtn */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47CDADD4E114DBF0063C89DB694456F9 /* Build configuration list for PBXNativeTarget "JOEmojiableBtn" */;
-			buildPhases = (
-				FB104C3A616C5723CB339B62C1A07B42 /* Sources */,
-				9DF621659CD90F6854BD6F024A40CC33 /* Frameworks */,
-				986A849DC16F810C568DC84D44F110DF /* Resources */,
-				66457F3566007348AB86856E3B954FCA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9B3F60F860B616A4D00B8471B7412F12 /* PBXTargetDependency */,
-			);
-			name = JOEmojiableBtn;
-			productName = JOEmojiableBtn;
-			productReference = 98D392355DBC72A5BDB606D261FF08A6 /* JOEmojiableBtn.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E65F9AB9BE247231E5D3F6A891429230 /* JOEmojiableBtn-JOEmojiableBtn */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2B80FA14EED35C7920026B50D3AEBB90 /* Build configuration list for PBXNativeTarget "JOEmojiableBtn-JOEmojiableBtn" */;
-			buildPhases = (
-				B21D409445CD2C2021A868D9D069814E /* Sources */,
-				E263B7691B9E176E37F0731C5D9E32D0 /* Frameworks */,
-				4A6A0BA6F1A901D42B76971C37E9D76D /* Resources */,
+				4B9E4647BEE491A46A6BF66766671E3C /* Sources */,
+				E2E204881CA14D7BB4875740805689A4 /* Frameworks */,
+				F83C06F20ADE1D6D49432AEF73F4BD2E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -366,187 +307,198 @@
 			);
 			name = "JOEmojiableBtn-JOEmojiableBtn";
 			productName = "JOEmojiableBtn-JOEmojiableBtn";
-			productReference = 863D204CAAB248548C977D078842B4DC /* JOEmojiableBtn.bundle */;
+			productReference = 54CDD39D0CD4278D2769784F596730E5 /* JOEmojiableBtn.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		9A9A75B56D8F6ECFA56DCBB1A2B26F30 /* JOEmojiableBtn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0B2B304E01A8044C45B8872ED00300A /* Build configuration list for PBXNativeTarget "JOEmojiableBtn" */;
+			buildPhases = (
+				860F85979B8B148541BDC6F14B799195 /* Headers */,
+				2B18F6258AC15488FBBC0425AABFA2A4 /* Sources */,
+				E07AFAE81DE436BC095A9401E576EEDF /* Frameworks */,
+				5BC5992D3D1B1A3988447F98696C67D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19C2718116E8D7172C81FAADFD91AAF8 /* PBXTargetDependency */,
+			);
+			name = JOEmojiableBtn;
+			productName = JOEmojiableBtn;
+			productReference = 21CF23AB3965FAE6DCA1F875EB06E3FA /* JOEmojiableBtn.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A258CE8861541B76AD8453E830244674 /* Pods-JOEmojiableBtn_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F703BEDD7A13DDC9479C981C8E896CAB /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Tests" */;
+			buildPhases = (
+				3F90CE67756CDA8B66650A197ABE4582 /* Headers */,
+				3C4892D9024FE1BDE7D1F80971F6F088 /* Sources */,
+				77EAB5008BA65B5E1BB4C5649A4A3AB5 /* Frameworks */,
+				F86CCBA75F0307881F08F35D26E695B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C14DDAA24FA47FFA90173B06414A4E3 /* PBXTargetDependency */,
+			);
+			name = "Pods-JOEmojiableBtn_Tests";
+			productName = "Pods-JOEmojiableBtn_Tests";
+			productReference = 4DB81882AA610837B881A3153BFE921F /* Pods_JOEmojiableBtn_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4D1B8825344B47BD19C9B2DB0561C94 /* Pods-JOEmojiableBtn_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0774D6BC95489272CE290878FEBD3CD /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Example" */;
+			buildPhases = (
+				DA4E2F6DFBF60C5372914B3C451EC81A /* Headers */,
+				043206D146159BAB7A09618EC45E94BE /* Sources */,
+				86D8E37AEEF478F9D1D495476326A74D /* Frameworks */,
+				2B3C39EDD3F3D9DDBD3201E9539F2055 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABC426D9E709D79DD3672A8972513E7B /* PBXTargetDependency */,
+			);
+			name = "Pods-JOEmojiableBtn_Example";
+			productName = "Pods-JOEmojiableBtn_Example";
+			productReference = B05C9D60C6F5F988F4F9A9389FEF9836 /* Pods_JOEmojiableBtn_Example.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					80DF8BC19D5B5BE0305786F376349D98 = {
-						LastSwiftMigration = 0900;
-					};
-				};
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1210;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 51685725557AFC9A4ADA6F327143C80B /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C0BE20CC3D5D9E0ABCA0E4AD42C9036E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80DF8BC19D5B5BE0305786F376349D98 /* JOEmojiableBtn */,
-				E65F9AB9BE247231E5D3F6A891429230 /* JOEmojiableBtn-JOEmojiableBtn */,
-				0D4EFD468A3811E3BF9D09EF83DCAE07 /* Pods-JOEmojiableBtn_Example */,
-				220D629398D110456C833564970A8B10 /* Pods-JOEmojiableBtn_Tests */,
+				9A9A75B56D8F6ECFA56DCBB1A2B26F30 /* JOEmojiableBtn */,
+				779862FFC7C4596FE750524EAE2F2E7C /* JOEmojiableBtn-JOEmojiableBtn */,
+				D4D1B8825344B47BD19C9B2DB0561C94 /* Pods-JOEmojiableBtn_Example */,
+				A258CE8861541B76AD8453E830244674 /* Pods-JOEmojiableBtn_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4A6A0BA6F1A901D42B76971C37E9D76D /* Resources */ = {
+		2B3C39EDD3F3D9DDBD3201E9539F2055 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		986A849DC16F810C568DC84D44F110DF /* Resources */ = {
+		5BC5992D3D1B1A3988447F98696C67D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD262F8DCEE151B95B7EA7788EE5CB20 /* JOEmojiableBtn.bundle in Resources */,
+				B4539E6905395158FFF03E6EFD0B50CA /* JOEmojiableBtn.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F83C06F20ADE1D6D49432AEF73F4BD2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86CCBA75F0307881F08F35D26E695B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33825A70C3F4BBE5DEF706DA7BD3CDF0 /* Sources */ = {
+		043206D146159BAB7A09618EC45E94BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E58D39A30A61E94EC14AAA4B4BCB374 /* Pods-JOEmojiableBtn_Tests-dummy.m in Sources */,
+				AE90FCC8E443E50F743E1F67251044BD /* Pods-JOEmojiableBtn_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A4D6603A7D9DB2A06F4214ACF816C7A /* Sources */ = {
+		2B18F6258AC15488FBBC0425AABFA2A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD143B637C5C51F8AC56CA076A14A230 /* Pods-JOEmojiableBtn_Example-dummy.m in Sources */,
+				008F7440BE6EE4B6FB6F8D5D5E097ABB /* CGRect+init.swift in Sources */,
+				79748FEB2EC643DED46654DB40029C9B /* CGSize+init.swift in Sources */,
+				892786A1AA53A70C6096EA1DF7F38241 /* InformationView.swift in Sources */,
+				3C5B4ED28D60237D244757C7FE4B33E1 /* JOEmojiableBtn-dummy.m in Sources */,
+				D9EB51B68E4E9B50FE12DA86F20AE68B /* JOEmojiableBtn.swift in Sources */,
+				494F61CBFAB2C988F7E1EB80A32D9A0C /* JOEmojiableBtnConfig.swift in Sources */,
+				23423346D108FE2315750AADB34B1BD7 /* JOEmojiableBtnDelegate.swift in Sources */,
+				28B971608F8F09BF14966C27D66ADB1D /* JOEmojiableOption.swift in Sources */,
+				8DBF604DC537EF3E100EFFCCCB64678E /* SelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B21D409445CD2C2021A868D9D069814E /* Sources */ = {
+		3C4892D9024FE1BDE7D1F80971F6F088 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7889158E92102F47049680DA9CD079B8 /* Pods-JOEmojiableBtn_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB104C3A616C5723CB339B62C1A07B42 /* Sources */ = {
+		4B9E4647BEE491A46A6BF66766671E3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC13235920784A2D00ED28B3 /* JOEmojiableOption.swift in Sources */,
-				EC13235F207EC2CB00ED28B3 /* JOEmojiableBtnDelegate.swift in Sources */,
-				9EDEEC2CF65B7B8A1C01A1C3ACAC0394 /* JOEmojiableBtn-dummy.m in Sources */,
-				ECA5B203207745E6000835F3 /* InformationView.swift in Sources */,
-				EC13235D2079AFB600ED28B3 /* CGRect+init.swift in Sources */,
-				A689E54C6AA823EB1D49ECCF1491DC51 /* JOEmojiableBtn.swift in Sources */,
-				CCB3A5D91CF1861B21E103AC7EFD7186 /* SelectorView.swift in Sources */,
-				ECA5B2072077C9AC000835F3 /* JOEmojiableBtnConfig.swift in Sources */,
-				EC13235B2079ABE100ED28B3 /* CGSize+init.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B3F60F860B616A4D00B8471B7412F12 /* PBXTargetDependency */ = {
+		19C2718116E8D7172C81FAADFD91AAF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "JOEmojiableBtn-JOEmojiableBtn";
-			target = E65F9AB9BE247231E5D3F6A891429230 /* JOEmojiableBtn-JOEmojiableBtn */;
-			targetProxy = B76525880C116F28BF515057A7DDA904 /* PBXContainerItemProxy */;
+			target = 779862FFC7C4596FE750524EAE2F2E7C /* JOEmojiableBtn-JOEmojiableBtn */;
+			targetProxy = BB9AFB56DBA9235AD444EEC6B0A4B5EC /* PBXContainerItemProxy */;
 		};
-		B4DF0A1350FA8D35E3862FCEA6C5DE36 /* PBXTargetDependency */ = {
+		7C14DDAA24FA47FFA90173B06414A4E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JOEmojiableBtn;
-			target = 80DF8BC19D5B5BE0305786F376349D98 /* JOEmojiableBtn */;
-			targetProxy = 9D7ED9CB3771EB063D0DE32D1CC73A54 /* PBXContainerItemProxy */;
+			target = 9A9A75B56D8F6ECFA56DCBB1A2B26F30 /* JOEmojiableBtn */;
+			targetProxy = 16A6AF2207C3FA140E2EAB9F3A9AB5F1 /* PBXContainerItemProxy */;
 		};
-		DC6E4E6329F04EFA882A53CC1213627C /* PBXTargetDependency */ = {
+		ABC426D9E709D79DD3672A8972513E7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JOEmojiableBtn;
-			target = 80DF8BC19D5B5BE0305786F376349D98 /* JOEmojiableBtn */;
-			targetProxy = 6041186939742FA79043FF702076D094 /* PBXContainerItemProxy */;
+			target = 9A9A75B56D8F6ECFA56DCBB1A2B26F30 /* JOEmojiableBtn */;
+			targetProxy = E2B3B93038B43C65B8D0DF8ED9E2AC4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1C3ED16E144B9A188CC88F2343EB3B4F /* Release */ = {
+		03C0BF290793AA6E12B6889AA20F8ABC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F09F7765DBD24B646BBE2D670C2B6F66 /* Pods-JOEmojiableBtn_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		21DB8720FECD16F76767132937F8AFE6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E49405B69E3D0FF5DBB94D0B10C9515 /* Pods-JOEmojiableBtn_Example.release.xcconfig */;
-			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -556,20 +508,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Pods-JOEmojiableBtn_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Pods-JOEmojiableBtn_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Pods-JOEmojiableBtn_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JOEmojiableBtn_Example;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -577,14 +528,15 @@
 			};
 			name = Release;
 		};
-		3B8A29E527817056EBC8FF04878964EE /* Release */ = {
+		08FEFA145438A356289CE6B3EDF378E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65DF7225A02A618DC99968E8A3A1CC4D /* JOEmojiableBtn.xcconfig */;
+			baseConfigurationReference = 27AD94F011F58EF3EE95DA2FA8018CE2 /* JOEmojiableBtn.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JOEmojiableBtn";
-				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/ResourceBundle-JOEmojiableBtn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IBSC_MODULE = JOEmojiableBtn;
+				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/ResourceBundle-JOEmojiableBtn-JOEmojiableBtn-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = JOEmojiableBtn;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -593,7 +545,7 @@
 			};
 			name = Release;
 		};
-		51F393FE91B4B6C835FB4B238187AD09 /* Debug */ = {
+		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -619,13 +571,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -645,55 +597,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		6338FACC78BC26EFEC0428ADDA3E384C /* Debug */ = {
+		1C1867D25643411F5086A0CE8C404A25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7AB44CB26113ED1D8FF54CD5DB15C45 /* Pods-JOEmojiableBtn_Tests.debug.xcconfig */;
+			baseConfigurationReference = 27AD94F011F58EF3EE95DA2FA8018CE2 /* JOEmojiableBtn.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Pods-JOEmojiableBtn_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JOEmojiableBtn_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		772618578A64FD84B69DB88F5952022C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65DF7225A02A618DC99968E8A3A1CC4D /* JOEmojiableBtn.xcconfig */;
-			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -704,28 +625,29 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn.modulemap";
+				PRODUCT_MODULE_NAME = JOEmojiableBtn;
 				PRODUCT_NAME = JOEmojiableBtn;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		935DFBDDDDAE4B29937AAB630998AA6E /* Debug */ = {
+		21A465469A555E0A85B1EDF26D73842C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB980683F11EE32F305A191FF31928E1 /* Pods-JOEmojiableBtn_Example.debug.xcconfig */;
+			baseConfigurationReference = BA61063D1F1F1BCEF1D69BC93A5FE6F7 /* Pods-JOEmojiableBtn_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -735,9 +657,9 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Pods-JOEmojiableBtn_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Pods-JOEmojiableBtn_Example.modulemap";
@@ -745,92 +667,24 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JOEmojiableBtn_Example;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B17D9A991255EF0B0BC0BB9254E8C561 /* Release */ = {
+		5637C99616ED3792F64ED2EE7CABCBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65DF7225A02A618DC99968E8A3A1CC4D /* JOEmojiableBtn.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn.modulemap";
-				PRODUCT_NAME = JOEmojiableBtn;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E4F49BDF5F1E8B1B289FF6089F2FA344 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C203221D92FD86644EA4091821C9B91F /* Pods-JOEmojiableBtn_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Pods-JOEmojiableBtn_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JOEmojiableBtn_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FD908FBC4856DA7D37956A53A65D5167 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65DF7225A02A618DC99968E8A3A1CC4D /* JOEmojiableBtn.xcconfig */;
+			baseConfigurationReference = 27AD94F011F58EF3EE95DA2FA8018CE2 /* JOEmojiableBtn.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JOEmojiableBtn";
-				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/ResourceBundle-JOEmojiableBtn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IBSC_MODULE = JOEmojiableBtn;
+				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/ResourceBundle-JOEmojiableBtn-JOEmojiableBtn-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = JOEmojiableBtn;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -839,55 +693,215 @@
 			};
 			name = Debug;
 		};
+		BBA692901E6149EDAEF5AD552B59FD32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9FA6BC47683AD5B9F8628B5061A6A22 /* Pods-JOEmojiableBtn_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Pods-JOEmojiableBtn_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Example/Pods-JOEmojiableBtn_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D503D1225B8701AD0501AC0C6770425A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C462C816BEE7705C2431999DB009A04C /* Pods-JOEmojiableBtn_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Pods-JOEmojiableBtn_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JOEmojiableBtn_Tests/Pods-JOEmojiableBtn_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E736197EE8326B2A19D9E9BCF534FFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AD94F011F58EF3EE95DA2FA8018CE2 /* JOEmojiableBtn.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JOEmojiableBtn/JOEmojiableBtn.modulemap";
+				PRODUCT_MODULE_NAME = JOEmojiableBtn;
+				PRODUCT_NAME = JOEmojiableBtn;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BAD510050B96D52DF8F720525D54438 /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Example" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				935DFBDDDDAE4B29937AAB630998AA6E /* Debug */,
-				21DB8720FECD16F76767132937F8AFE6 /* Release */,
+				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
+				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29ACA7A012C6EEF70BB08E0320FBA41B /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Tests" */ = {
+		B0774D6BC95489272CE290878FEBD3CD /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6338FACC78BC26EFEC0428ADDA3E384C /* Debug */,
-				E4F49BDF5F1E8B1B289FF6089F2FA344 /* Release */,
+				21A465469A555E0A85B1EDF26D73842C /* Debug */,
+				BBA692901E6149EDAEF5AD552B59FD32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2B80FA14EED35C7920026B50D3AEBB90 /* Build configuration list for PBXNativeTarget "JOEmojiableBtn-JOEmojiableBtn" */ = {
+		B0B2B304E01A8044C45B8872ED00300A /* Build configuration list for PBXNativeTarget "JOEmojiableBtn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD908FBC4856DA7D37956A53A65D5167 /* Debug */,
-				3B8A29E527817056EBC8FF04878964EE /* Release */,
+				E736197EE8326B2A19D9E9BCF534FFAA /* Debug */,
+				1C1867D25643411F5086A0CE8C404A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		F3685C54D8620D763CBD6AB8D9BB8241 /* Build configuration list for PBXNativeTarget "JOEmojiableBtn-JOEmojiableBtn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51F393FE91B4B6C835FB4B238187AD09 /* Debug */,
-				1C3ED16E144B9A188CC88F2343EB3B4F /* Release */,
+				5637C99616ED3792F64ED2EE7CABCBEF /* Debug */,
+				08FEFA145438A356289CE6B3EDF378E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47CDADD4E114DBF0063C89DB694456F9 /* Build configuration list for PBXNativeTarget "JOEmojiableBtn" */ = {
+		F703BEDD7A13DDC9479C981C8E896CAB /* Build configuration list for PBXNativeTarget "Pods-JOEmojiableBtn_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				772618578A64FD84B69DB88F5952022C /* Debug */,
-				B17D9A991255EF0B0BC0BB9254E8C561 /* Release */,
+				D503D1225B8701AD0501AC0C6770425A /* Debug */,
+				03C0BF290793AA6E12B6889AA20F8ABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

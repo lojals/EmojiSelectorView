@@ -1,6 +1,6 @@
 //
 //  InformationView.swift
-//  JOEmojiableBtn
+//  EmojiSelectorView
 //
 //  Created by Jorge R Ovalle Z on 4/6/18.
 //

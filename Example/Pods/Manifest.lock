@@ -1,16 +1,16 @@
 PODS:
-  - JOEmojiableBtn (4.0.0)
+  - EmojiSelectorView (4.0.0)
 
 DEPENDENCIES:
-  - JOEmojiableBtn (from `../`)
+  - EmojiSelectorView (from `../`)
 
 EXTERNAL SOURCES:
-  JOEmojiableBtn:
+  EmojiSelectorView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JOEmojiableBtn: 5b0aea14550fd5b2ebb3dac79cb51200dfb4e0da
+  EmojiSelectorView: b658b7d87c27acdf5ffa4b6be828adf88b03109d
 
-PODFILE CHECKSUM: dd6b6b4e88f149e88bc90157ed66f11bae6bca04
+PODFILE CHECKSUM: 51e94af6b43e01a708f019db669b91c92e99f4e7
 
 COCOAPODS: 1.8.4

@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import JOEmojiableBtn
+import EmojiSelectorView
 
 class Tests: XCTestCase {
 

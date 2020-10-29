@@ -1,8 +1,8 @@
-# JOEmojiableBtn
+# EmojiSelectorView
 
-[![Version](https://img.shields.io/cocoapods/v/JOEmojiableBtn.svg?style=flat)](http://cocoapods.org/pods/JOEmojiableBtn)
-[![License](https://img.shields.io/cocoapods/l/JOEmojiableBtn.svg?style=flat)](http://cocoapods.org/pods/JOEmojiableBtn)
-[![Platform](https://img.shields.io/cocoapods/p/JOEmojiableBtn.svg?style=flat)](http://cocoapods.org/pods/JOEmojiableBtn)
+[![Version](https://img.shields.io/cocoapods/v/EmojiSelectorView.svg?style=flat)](http://cocoapods.org/pods/EmojiSelectorView)
+[![License](https://img.shields.io/cocoapods/l/EmojiSelectorView.svg?style=flat)](http://cocoapods.org/pods/EmojiSelectorView)
+[![Platform](https://img.shields.io/cocoapods/p/EmojiSelectorView.svg?style=flat)](http://cocoapods.org/pods/EmojiSelectorView)
 
 ## Usage
 
@@ -14,17 +14,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-JOEmojiableBtn is available through [CocoaPods](http://cocoapods.org). To install
+EmojiSelectorView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "JOEmojiableBtn"
+pod "EmojiSelectorView"
 ```
 
 ## Examples
 
 ### 1. Basic Instance
-This instance create a **JOEmojiableBtn** using `default`  JOEmojiableBtnConfig.
+This instance create a **EmojiSelectorView** using `default`  EmojiSelectorViewConfig.
 Images from  [Trump reactionpacks style](http://www.reactionpacks.com/packs/2c1a1e41-e9e9-407a-a532-3bfdfef6b3e6).
 
 #### Example Code
@@ -39,7 +39,7 @@ let optionsDataset = [
     JOEmojiableOption(image: "img_6", name: "img6")
 ]
 
-let buttonSample1 = JOEmojiableBtn(frame: CGRect(origin: CGPoint(x: 40, y: 200), size: CGSize(width: 100, height: 50)))
+let buttonSample1 = EmojiSelectorView(frame: CGRect(origin: CGPoint(x: 40, y: 200), size: CGSize(width: 100, height: 50)))
 buttonSample1.delegate = self
 buttonSample1.backgroundColor = .green
 buttonSample1.dataset = optionsDataset
@@ -67,7 +67,7 @@ let config = JOEmojiableConfig(spacing: 2,
                                 maxSize: 45,
                                 spaceBetweenComponents: 30)
 
-let buttonSample2 = JOEmojiableBtn(frame: CGRect(origin: CGPoint(x: 40, y: 300), size: CGSize(width: 100, height: 50)), config: config)
+let buttonSample2 = EmojiSelectorView(frame: CGRect(origin: CGPoint(x: 40, y: 300), size: CGSize(width: 100, height: 50)), config: config)
 buttonSample2.delegate = self
 buttonSample2.backgroundColor = .green
 buttonSample2.dataset = optionsDataset
@@ -85,4 +85,4 @@ Jorge Ovalle, jroz9105@gmail.com
 
 ## License
 
-JOEmojiableBtn is available under the MIT license. See the LICENSE file for more info.
+EmojiSelectorView is available under the MIT license. See the LICENSE file for more info.

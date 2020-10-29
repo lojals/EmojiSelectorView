@@ -43,7 +43,6 @@ open class EmojiSelectorView: UIButton {
         return backgroundView
     }()
 
-    private var informationView: InformationView!
     private var optionsView: UIView!
 
     private let config: EmojiSelectorView.Config
@@ -89,7 +88,6 @@ open class EmojiSelectorView: UIButton {
             resetUI()
 
             UIView.animate(withDuration: 0.2) {
-                self.optionsView.frame.origin.y = self.originPoint.y - (config.spaceBetweenComponents + sizeBtn.height)
                 self.optionsView.alpha = 1
             }
 
@@ -119,22 +117,12 @@ open class EmojiSelectorView: UIButton {
 
         for (i, option) in optionsView.subviews.enumerated() {
             UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut, animations: {
-                self.informationView.alpha = 0
                 option.alpha = 0.3
                 option.frame.size = CGSize(sideSize: DesignConstants.sizeBeforeOpen)
-                var yPosForOption: CGFloat = self.optionsView.frame.height + self.config.size / 2
-
-                if let selectedItem = self.selectedItem, selectedItem == i {
-                    yPosForOption = -self.optionsView.frame.height
-                }
-
-                option.center = CGPoint(x: self.xPosition(for: i) + self.config.size / 2,
-                                        y: yPosForOption)
             }, completion: { (finished) -> Void in
                 if finished && i == (dataset.count / 2) {
                     UIView.animate(withDuration: 0.1, animations: {
                         self.optionsView.alpha = 0
-                        self.optionsView.frame.origin.y = self.originPoint.y - self.config.heightForSize
                     }, completion: { (finished) -> Void in
                         self.isActive = false
                         self.backgroundView.removeFromSuperview()
@@ -154,13 +142,10 @@ open class EmojiSelectorView: UIButton {
     private func loseFocusFromOptions() {
         guard let dataset = dataset else { fatalError("Dataset not initialized.") }
         selectedItem = nil
-        informationView.show()
         let config = self.config
         UIView.animate(withDuration: 0.3) {
             let sizeBtn = CGSize(width: self.xPosition(for: dataset.count),
                                  height: config.heightForSize)
-            let originOptionView = CGPoint(x: self.originPoint.x, y: self.originPoint.y - (config.spaceBetweenComponents + sizeBtn.height))
-            self.optionsView.frame = CGRect(origin: originOptionView, size: sizeBtn)
             self.optionsView.layer.cornerRadius = sizeBtn.height / 2
             for (idx, view) in self.optionsView.subviews.enumerated() {
                 view.frame = CGRect(x: self.xPosition(for: idx), y: config.spacing, sideSize: config.size)
@@ -176,13 +161,10 @@ open class EmojiSelectorView: UIButton {
 
         if index >= 0 && index < dataset.count {
             selectedItem = index
-            informationView.hide()
             let config = self.config
             UIView.animate(withDuration: 0.3) {
                 let previousOption = CGFloat(dataset.count - 1)
                 let sizeBtn = CGSize(width: previousOption * (config.spacing + config.minSize) + config.maxSize, height: config.heightForMinSize)
-                self.optionsView.frame = CGRect(origin: CGPoint(x: self.originPoint.x, y: self.originPoint.y - (config.spaceBetweenComponents + sizeBtn.height)),
-                                                size: sizeBtn)
                 self.optionsView.layer.cornerRadius = sizeBtn.height / 2
                 var last: CGFloat = index != 0 ? config.spacing : 0
 
@@ -229,10 +211,6 @@ open class EmojiSelectorView: UIButton {
 
         superview?.addSubview(backgroundView)
 
-        informationView = InformationView(frame: CGRect(x: 0, y: originPoint.y, width: DesignConstants.screenRect.width, height: frame.height))
-        informationView.backgroundColor = .white
-        backgroundView.addSubview(informationView)
-
         let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
         let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - optionsViewSize.height)
         optionsView = UIView(frame: CGRect(origin: optionsViewOrigin, size: optionsViewSize))
@@ -254,7 +232,7 @@ extension EmojiSelectorView: SelectorViewDelegate {
         let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
 
         // Check if the point's position is inside the defined area.
-        if point.y < (optionsView.frame.minY - DesignConstants.bottomThresholdLoseFocus) || point.y > (informationView.frame.maxY + DesignConstants.topThresholdLoseFocus) {
+        if point.y < (optionsView.frame.minY - DesignConstants.bottomThresholdLoseFocus) || point.y > (optionsView.frame.maxY + DesignConstants.topThresholdLoseFocus) {
             loseFocusFromOptions()
         } else {
             if point.x - originPoint.x > 0 && point.x < optionsView.frame.maxX {

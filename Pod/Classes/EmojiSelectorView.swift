@@ -30,7 +30,7 @@ open class EmojiSelectorView: UIButton {
 
     open weak var delegate: EmojiSelectorViewDelegate?
 
-    open var dataset: [EmojiSelectorViewOption]?
+    open var dataset: [EmojiSelectorViewOption] = []
 
     private var isActive: Bool = false
     public private (set) var selectedItem: Int?
@@ -51,7 +51,7 @@ open class EmojiSelectorView: UIButton {
 
     private lazy var longTap: UILongPressGestureRecognizer = {
         return UILongPressGestureRecognizer(target: self,
-                                            action: #selector(EmojiSelectorView.expandOptions))
+                                            action: #selector(EmojiSelectorView.expand))
     }()
 
     // MARK: - View lifecycle
@@ -70,6 +70,7 @@ open class EmojiSelectorView: UIButton {
         layer.masksToBounds = false
     }
 
+    @available(*, unavailable)
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -77,9 +78,8 @@ open class EmojiSelectorView: UIButton {
     // MARK: - Visual component interaction / animation
 
     /// Function that open and expand the Options Selector.
-    @objc private func expandOptions() {
+    @objc private func expand() {
         if !isActive {
-            guard let dataset = dataset else { fatalError("Dataset not initialized.") }
             selectedItem = nil
             isActive = true
 
@@ -112,15 +112,13 @@ open class EmojiSelectorView: UIButton {
     }
 
     /// Function that collapse and close the Options Selector.
-    private func collapseOptions() {
-        guard let dataset = dataset else { fatalError("Dataset not initialized.") }
-
+    private func collapse() {
         for (i, option) in optionsView.subviews.enumerated() {
             UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut, animations: {
                 option.alpha = 0.3
                 option.frame.size = CGSize(sideSize: DesignConstants.sizeBeforeOpen)
             }, completion: { (finished) -> Void in
-                if finished && i == (dataset.count / 2) {
+                if finished && i == (self.dataset.count / 2) {
                     UIView.animate(withDuration: 0.1, animations: {
                         self.optionsView.alpha = 0
                     }, completion: { (finished) -> Void in
@@ -140,11 +138,10 @@ open class EmojiSelectorView: UIButton {
     /// A function intended to animate the selector and the options,
     /// in case the user is not focusing a specific option.
     private func loseFocusFromOptions() {
-        guard let dataset = dataset else { fatalError("Dataset not initialized.") }
         selectedItem = nil
         let config = self.config
         UIView.animate(withDuration: 0.3) {
-            let sizeBtn = CGSize(width: self.xPosition(for: dataset.count),
+            let sizeBtn = CGSize(width: self.xPosition(for: self.dataset.count),
                                  height: config.heightForSize)
             self.optionsView.layer.cornerRadius = sizeBtn.height / 2
             for (idx, view) in self.optionsView.subviews.enumerated() {
@@ -157,13 +154,11 @@ open class EmojiSelectorView: UIButton {
     ///
     /// - Parameter index: The index of the option in the dataset.
     private func focusOption(withIndex index: Int) {
-        guard let dataset = dataset else { fatalError("Dataset not initialized.") }
-
         if index >= 0 && index < dataset.count {
             selectedItem = index
             let config = self.config
             UIView.animate(withDuration: 0.3) {
-                let previousOption = CGFloat(dataset.count - 1)
+                let previousOption = CGFloat(self.dataset.count - 1)
                 let sizeBtn = CGSize(width: previousOption * (config.spacing + config.minSize) + config.maxSize, height: config.heightForMinSize)
                 self.optionsView.layer.cornerRadius = sizeBtn.height / 2
                 var last: CGFloat = index != 0 ? config.spacing : 0
@@ -200,8 +195,6 @@ open class EmojiSelectorView: UIButton {
 
     /// Reset the UI to the initial state.
     private func resetUI() {
-        guard let dataset = dataset else { fatalError("Dataset not initialized.") }
-
         originPoint = superview?.convert(frame.origin, to: nil) ?? .zero
 
         if originPoint != frame.origin {
@@ -228,7 +221,6 @@ open class EmojiSelectorView: UIButton {
 extension EmojiSelectorView: SelectorViewDelegate {
 
     public func movedTo(_ point: CGPoint) {
-        guard let dataset = dataset else { fatalError("Dataset not initialized.") }
         let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
 
         // Check if the point's position is inside the defined area.
@@ -244,6 +236,6 @@ extension EmojiSelectorView: SelectorViewDelegate {
     }
 
     public func endTouch(_ point: CGPoint) {
-        collapseOptions()
+        collapse()
     }
 }

@@ -5,7 +5,7 @@
 //  Created by Jorge R Ovalle Z on 4/6/18.
 //
 
-import Foundation
+import CoreGraphics
 
 /// A type representing the basic configurations for a `JOEmojiableBtn`.
 public struct JOEmojiableConfig {

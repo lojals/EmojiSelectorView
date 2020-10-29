@@ -1,26 +1,33 @@
 {
   "name": "JOEmojiableBtn",
-  "version": "0.1.0",
-  "summary": "Option selector that works similar to Reactions by fb",
+  "version": "4.0.0",
+  "summary": "Option selector that can be used as reactions",
   "description": "Totally customizable Options (Emoji) Selector based on Reactions",
   "homepage": "https://github.com/lojals/JOEmojiableBtn",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
     "Jorge Ovalle": "jroz9105@gmail.com"
   },
   "source": {
     "git": "https://github.com/lojals/JOEmojiableBtn.git",
-    "tag": "0.1.0"
+    "tag": "4.0.0"
   },
-  "social_media_url": "https://twitter.com/lojals_",
+  "social_media_url": "https://github.com/lojals",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "requires_arc": true,
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "5.0"
+  },
+  "swift_versions": "5.0",
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "JOEmojiableBtn": [
       "Pod/Assets/*.png"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

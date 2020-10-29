@@ -1,6 +1,6 @@
 //
 //  SelectorView.swift
-//  JOEmojiableBtn
+//  EmojiSelectorView
 //
 //  Created by Jorge Raul Ovalle Zuleta on 2/28/16.
 //
@@ -8,7 +8,7 @@
 import UIKit
 
 /// Describes a type that is informed of events occurring within a `SelectorView`.
-public protocol SelectorViewDelegate: class {
+public protocol SelectorViewDelegate: AnyObject {
 
     /// This function is dispatched when `touchesMoved` is triggered in `SelectorView`.
     ///

@@ -29,12 +29,12 @@ public final class EmojiSelectorView: UIButton {
     private lazy var optionsView: UIView = {
         let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
         let optionsView = UIView(frame: CGRect(origin: .zero, size: optionsViewSize))
-        optionsView.layer.cornerRadius  = optionsView.frame.height / 2
-        optionsView.backgroundColor     = .white
-        optionsView.layer.shadowColor   = UIColor.lightGray.cgColor
-        optionsView.layer.shadowOffset  = .zero
+        optionsView.layer.cornerRadius = optionsView.frame.height / 2
+        optionsView.backgroundColor = .white
+        optionsView.layer.shadowColor = UIColor.lightGray.cgColor
+        optionsView.layer.shadowOffset = .zero
         optionsView.layer.shadowOpacity = 0.5
-        optionsView.alpha               = 0.3
+        optionsView.alpha = 0.3
         backgroundView.addSubview(optionsView)
         return optionsView
     }()

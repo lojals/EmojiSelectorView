@@ -8,8 +8,8 @@
 import UIKit
 import EmojiSelectorView
 
-class ViewController: UIViewController, EmojiSelectorViewDelegate {
-    
+final class ViewController: UIViewController, EmojiSelectorViewDelegate {
+
     // MARK: DesignConstants
     enum DesignConstants {
         static var mainSampleColor = UIColor(red: 0.27, green: 0.69, blue: 0.67, alpha: 1)
@@ -19,7 +19,6 @@ class ViewController: UIViewController, EmojiSelectorViewDelegate {
     }
 
     // MARK: Properties definition
-    
     let optionsDataset = [
         EmojiSelectorViewOption(image: "img_1", name: "dislike"),
         EmojiSelectorViewOption(image: "img_2", name: "broken"),
@@ -46,7 +45,6 @@ class ViewController: UIViewController, EmojiSelectorViewDelegate {
     }()
 
     // MARK: View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,9 +80,8 @@ class ViewController: UIViewController, EmojiSelectorViewDelegate {
         buttonSample2.dataset = optionsDataset
         view.addSubview(buttonSample2)
     }
-    
-    // MARK: JOEmojiableDelegate
 
+    // MARK: JOEmojiableDelegate
     func selectedOption(_ sender: EmojiSelectorView, index: Int) {
         print("Option \(index) selected")
         labelInfo.text = "Option \(index) selected"

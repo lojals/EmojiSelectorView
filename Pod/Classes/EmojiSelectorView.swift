@@ -20,15 +20,24 @@ public final class EmojiSelectorView: UIButton {
     
     public private (set) var selectedItem: Int?
     
-    private var originPoint: CGPoint = .zero
-    
     private lazy var backgroundView: UIView = {
         let backgroundView = UIView(frame: UIScreen.main.bounds)
-        backgroundView.backgroundColor = .orange
+        backgroundView.backgroundColor = .clear
         return backgroundView
     }()
     
-    private var optionsView: UIView!
+    private lazy var optionsView: UIView = {
+        let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
+        let optionsView = UIView(frame: CGRect(origin: .zero, size: optionsViewSize))
+        optionsView.layer.cornerRadius  = optionsView.frame.height / 2
+        optionsView.backgroundColor     = .white
+        optionsView.layer.shadowColor   = UIColor.lightGray.cgColor
+        optionsView.layer.shadowOffset  = .zero
+        optionsView.layer.shadowOpacity = 0.5
+        optionsView.alpha               = 0.3
+        backgroundView.addSubview(optionsView)
+        return optionsView
+    }()
     
     private let config: EmojiSelectorView.Config
     
@@ -48,10 +57,8 @@ public final class EmojiSelectorView: UIButton {
         self.dataset = []
         super.init(frame: frame)
         
-        let longTap = UILongPressGestureRecognizer(target: self,
-                                                   action: #selector(EmojiSelectorView.handlePress(sender:)))
-        addGestureRecognizer(longTap)
-        layer.masksToBounds = false
+        addGestureRecognizer(UILongPressGestureRecognizer(target: self,
+                                                          action: #selector(EmojiSelectorView.handlePress(sender:))))
     }
     
     @available(*, unavailable)
@@ -81,7 +88,13 @@ public final class EmojiSelectorView: UIButton {
         
         let config = self.config
         let sizeBtn = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
-        reset()
+        
+        let originPoint = rootView?.convert(frame.origin, to: nil) ?? .zero
+        rootView?.addSubview(backgroundView)
+        
+        let originalSize = optionsView.frame.size
+        let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - originalSize.height - 10)
+        optionsView.frame = CGRect(origin: optionsViewOrigin, size: originalSize)
         
         UIView.animate(withDuration: 0.2) {
             self.optionsView.alpha = 1
@@ -110,10 +123,10 @@ public final class EmojiSelectorView: UIButton {
         // Check if the point's position is inside the defined area.
         if optionsView.contains(point) {
             let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
-            focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
+            focusOption(withIndex: Int(round((point.x - optionsView.frame.minX) / relativeSizePerOption)))
         } else {
             selectedItem = nil
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.2) {
                 for (idx, view) in self.optionsView.subviews.enumerated() {
                     view.frame = CGRect(x: self.xPosition(for: idx), y: self.config.spacing, sideSize: self.config.size)
                 }
@@ -125,20 +138,17 @@ public final class EmojiSelectorView: UIButton {
     private func collapse() {
         for (i, option) in optionsView.subviews.enumerated() {
             UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut) {
-                option.alpha = 0.3
+                option.alpha = 0
                 option.frame.size = CGSize(sideSize: self.sizeBeforeOpen)
             } completion: { finished in
-                guard finished && i == (self.dataset.count / 2) else { return }
-                UIView.animate(withDuration: 0.1) {
-                    self.optionsView.alpha = 0
-                } completion: { finished in
-                    self.isActive = false
-                    self.backgroundView.removeFromSuperview()
-                    if let selectedItem = self.selectedItem {
-                        self.delegate?.selectedOption(self, index: selectedItem)
-                    } else {
-                        self.delegate?.cancelledAction(self)
-                    }
+                guard finished && i == (self.dataset.count/2) else { return }
+                self.isActive = false
+                self.backgroundView.removeFromSuperview()
+                self.optionsView.subviews.forEach { $0.removeFromSuperview() }
+                if let selectedItem = self.selectedItem {
+                    self.delegate?.selectedOption(self, index: selectedItem)
+                } else {
+                    self.delegate?.cancelledAction(self)
                 }
             }
         }
@@ -154,7 +164,7 @@ public final class EmojiSelectorView: UIButton {
         var last: CGFloat = index != 0 ? config.spacing : 0
         let centerYForOption = optionsView.bounds.height/2
         
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.2) {
             for (idx, view) in self.optionsView.subviews.enumerated() {
                 view.frame = CGRect(x: last, y: config.spacing, sideSize: config.minSize)
                 switch idx {
@@ -179,22 +189,5 @@ public final class EmojiSelectorView: UIButton {
     private func xPosition(for option: Int) -> CGFloat {
         let option = CGFloat(option)
         return (option + 1) * config.spacing + config.size * option
-    }
-    
-    /// Reset the UI to the initial state.
-    private func reset() {
-        originPoint = rootView?.convert(frame.origin, to: nil) ?? .zero
-        rootView?.addSubview(backgroundView)
-        
-        let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
-        let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - optionsViewSize.height)
-        optionsView = UIView(frame: CGRect(origin: optionsViewOrigin, size: optionsViewSize))
-        optionsView.layer.cornerRadius  = optionsView.frame.height / 2
-        optionsView.backgroundColor     = .white
-        optionsView.layer.shadowColor   = UIColor.lightGray.cgColor
-        optionsView.layer.shadowOffset  = .zero
-        optionsView.layer.shadowOpacity = 0.5
-        optionsView.alpha               = 0.3
-        backgroundView.addSubview(optionsView)
     }
 }

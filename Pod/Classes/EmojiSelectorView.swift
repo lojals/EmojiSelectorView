@@ -9,52 +9,45 @@ import UIKit
 
 /// A type that represents the selector with options froma dataset.
 open class EmojiSelectorView: UIButton {
-
+    
     /// Constants used for UI component layout.
     private enum DesignConstants {
-
+        
         /// The bottom threshold area to release / cancel the selection.
         static let bottomThresholdLoseFocus: CGFloat = 50
-
+        
         /// The top threshold area to release / cancel the selection.
         static let topThresholdLoseFocus: CGFloat = 30
-
+        
         /// A `CGRect` that match with the screen rect.
         static let screenRect = UIScreen.main.bounds
-
+        
         /// The size of the option when the expande animation start.
         static let sizeBeforeOpen: CGFloat = 10
     }
-
+    
     // MARK: - Properties declaration
-
+    
     open weak var delegate: EmojiSelectorViewDelegate?
-
+    
     open var dataset: [EmojiSelectorViewOption] = []
-
+    
     private var isActive: Bool = false
     public private (set) var selectedItem: Int?
     private var originPoint: CGPoint = .zero
-
+    
     private lazy var backgroundView: UIView = {
         let backgroundView = UIView(frame: DesignConstants.screenRect)
         backgroundView.backgroundColor = .clear
         return backgroundView
     }()
-
+    
     private var optionsView: UIView!
-
+    
     private let config: EmojiSelectorView.Config
-
-    // MARK: - Events declaration
-
-    private lazy var longTap: UILongPressGestureRecognizer = {
-        return UILongPressGestureRecognizer(target: self,
-                                            action: #selector(EmojiSelectorView.expand))
-    }()
-
+    
     // MARK: - View lifecycle
-
+    
     /// Creates a new instace of `EmojiSelectorView`.
     ///
     /// - Parameters:
@@ -64,49 +57,46 @@ open class EmojiSelectorView: UIButton {
         self.config = config
         self.dataset = []
         super.init(frame: frame)
-
+        
+        let longTap = UILongPressGestureRecognizer(target: self,
+                                                   action: #selector(EmojiSelectorView.handlePress(sender:)))
         addGestureRecognizer(longTap)
         layer.masksToBounds = false
     }
-
+    
     @available(*, unavailable)
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: - Visual component interaction / animation
-
+    
     /// Function that open and expand the Options Selector.
-    @objc private func expand(sender: UILongPressGestureRecognizer) {
-        if sender.state == .ended {
+    @objc private func handlePress(sender: UILongPressGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            expand()
+        case .changed:
+            let point = sender.location(ofTouch: 0, in: UIApplication.shared.keyWindow?.rootViewController?.view)
+            move(point)
+        case .ended:
             collapse()
-            return
+        default: break
         }
-        
-        let point = sender.location(ofTouch: 0, in: UIApplication.shared.keyWindow?.rootViewController?.view)
-
-        guard !isActive else {
-            // Check if the point's position is inside the defined area.
-            if optionsView.contains(point) {
-                let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
-                focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
-            } else {
-                loseFocusFromOptions()
-            }
-            return
-        }
-        
+    }
+    
+    private func expand() {
         selectedItem = nil
         isActive = true
-
+        
         let config = self.config
         let sizeBtn = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
-        resetUI()
-
+        reset()
+        
         UIView.animate(withDuration: 0.2) {
             self.optionsView.alpha = 1
         }
-
+        
         for i in 0..<dataset.count {
             let optionFrame = CGRect(x: xPosition(for: i), y: sizeBtn.height * 1.2,
                                      sideSize: DesignConstants.sizeBeforeOpen)
@@ -125,7 +115,17 @@ open class EmojiSelectorView: UIButton {
             }, completion: nil)
         }
     }
-
+    
+    private func move(_ point: CGPoint) {
+        // Check if the point's position is inside the defined area.
+        if optionsView.contains(point) {
+            let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
+            focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
+        } else {
+            loseFocusFromOptions()
+        }
+    }
+    
     /// Function that collapse and close the Options Selector.
     private func collapse() {
         for (i, option) in optionsView.subviews.enumerated() {
@@ -134,9 +134,9 @@ open class EmojiSelectorView: UIButton {
                 option.frame.size = CGSize(sideSize: DesignConstants.sizeBeforeOpen)
             } completion: { (finished) in
                 if finished && i == (self.dataset.count / 2) {
-                    UIView.animate(withDuration: 0.1, animations: {
+                    UIView.animate(withDuration: 0.1) {
                         self.optionsView.alpha = 0
-                    }, completion: { (finished) -> Void in
+                    } completion: { finished in
                         self.isActive = false
                         self.backgroundView.removeFromSuperview()
                         if let selectedItem = self.selectedItem {
@@ -144,12 +144,12 @@ open class EmojiSelectorView: UIButton {
                         } else {
                             self.delegate?.cancelledAction(self)
                         }
-                    })
+                    }
                 }
             }
         }
     }
-
+    
     /// A function intended to animate the selector and the options,
     /// in case the user is not focusing a specific option.
     private func loseFocusFromOptions() {
@@ -160,7 +160,7 @@ open class EmojiSelectorView: UIButton {
             }
         }
     }
-
+    
     /// When a user in focusing an option, that option should magnify.
     ///
     /// - Parameter index: The index of the option in the dataset.
@@ -188,7 +188,7 @@ open class EmojiSelectorView: UIButton {
             }
         }
     }
-
+    
     /// Calculate the `x` position for a given dataset option.
     ///
     /// - Parameter option: the position of the option in the dataset. <0... dataset.count>.
@@ -197,18 +197,18 @@ open class EmojiSelectorView: UIButton {
         let option = CGFloat(option)
         return (option + 1) * config.spacing + config.size * option
     }
-
+    
     /// Reset the UI to the initial state.
-    private func resetUI() {
+    private func reset() {
         originPoint = superview?.convert(frame.origin, to: nil) ?? .zero
-
+        
         if originPoint != frame.origin {
             backgroundView.frame.origin.x -= originPoint.x
             backgroundView.frame.origin.y -= originPoint.y
         }
         
         UIApplication.shared.keyWindow?.rootViewController?.view.addSubview(backgroundView)
-
+        
         let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
         let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - optionsViewSize.height)
         optionsView = UIView(frame: CGRect(origin: optionsViewOrigin, size: optionsViewSize))

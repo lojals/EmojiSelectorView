@@ -8,43 +8,33 @@
 import UIKit
 
 /// A type that represents the selector with options froma dataset.
-open class EmojiSelectorView: UIButton {
+public final class EmojiSelectorView: UIButton {
     
-    /// Constants used for UI component layout.
-    private enum DesignConstants {
-        
-        /// The bottom threshold area to release / cancel the selection.
-        static let bottomThresholdLoseFocus: CGFloat = 50
-        
-        /// The top threshold area to release / cancel the selection.
-        static let topThresholdLoseFocus: CGFloat = 30
-        
-        /// A `CGRect` that match with the screen rect.
-        static let screenRect = UIScreen.main.bounds
-        
-        /// The size of the option when the expande animation start.
-        static let sizeBeforeOpen: CGFloat = 10
-    }
+    private let sizeBeforeOpen: CGFloat = 10
     
-    // MARK: - Properties declaration
+    public weak var delegate: EmojiSelectorViewDelegate?
     
-    open weak var delegate: EmojiSelectorViewDelegate?
-    
-    open var dataset: [EmojiSelectorViewOption] = []
+    public var dataset: [EmojiSelectorViewOption] = []
     
     private var isActive: Bool = false
+    
     public private (set) var selectedItem: Int?
+    
     private var originPoint: CGPoint = .zero
     
     private lazy var backgroundView: UIView = {
-        let backgroundView = UIView(frame: DesignConstants.screenRect)
-        backgroundView.backgroundColor = .clear
+        let backgroundView = UIView(frame: UIScreen.main.bounds)
+        backgroundView.backgroundColor = .orange
         return backgroundView
     }()
     
     private var optionsView: UIView!
     
     private let config: EmojiSelectorView.Config
+    
+    private var rootView: UIView? {
+        return UIApplication.shared.keyWindow?.rootViewController?.view
+    }
     
     // MARK: - View lifecycle
     
@@ -77,7 +67,7 @@ open class EmojiSelectorView: UIButton {
         case .began:
             expand()
         case .changed:
-            let point = sender.location(ofTouch: 0, in: UIApplication.shared.keyWindow?.rootViewController?.view)
+            let point = sender.location(ofTouch: 0, in: rootView)
             move(point)
         case .ended:
             collapse()
@@ -99,7 +89,7 @@ open class EmojiSelectorView: UIButton {
         
         for i in 0..<dataset.count {
             let optionFrame = CGRect(x: xPosition(for: i), y: sizeBtn.height * 1.2,
-                                     sideSize: DesignConstants.sizeBeforeOpen)
+                                     sideSize: sizeBeforeOpen)
             let option = UIImageView(frame: optionFrame)
             option.image = UIImage(named: dataset[i].image)
             option.alpha = 0.6
@@ -122,7 +112,12 @@ open class EmojiSelectorView: UIButton {
             let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
             focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
         } else {
-            loseFocusFromOptions()
+            selectedItem = nil
+            UIView.animate(withDuration: 0.3) {
+                for (idx, view) in self.optionsView.subviews.enumerated() {
+                    view.frame = CGRect(x: self.xPosition(for: idx), y: self.config.spacing, sideSize: self.config.size)
+                }
+            }
         }
     }
     
@@ -131,32 +126,20 @@ open class EmojiSelectorView: UIButton {
         for (i, option) in optionsView.subviews.enumerated() {
             UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut) {
                 option.alpha = 0.3
-                option.frame.size = CGSize(sideSize: DesignConstants.sizeBeforeOpen)
-            } completion: { (finished) in
-                if finished && i == (self.dataset.count / 2) {
-                    UIView.animate(withDuration: 0.1) {
-                        self.optionsView.alpha = 0
-                    } completion: { finished in
-                        self.isActive = false
-                        self.backgroundView.removeFromSuperview()
-                        if let selectedItem = self.selectedItem {
-                            self.delegate?.selectedOption(self, index: selectedItem)
-                        } else {
-                            self.delegate?.cancelledAction(self)
-                        }
+                option.frame.size = CGSize(sideSize: self.sizeBeforeOpen)
+            } completion: { finished in
+                guard finished && i == (self.dataset.count / 2) else { return }
+                UIView.animate(withDuration: 0.1) {
+                    self.optionsView.alpha = 0
+                } completion: { finished in
+                    self.isActive = false
+                    self.backgroundView.removeFromSuperview()
+                    if let selectedItem = self.selectedItem {
+                        self.delegate?.selectedOption(self, index: selectedItem)
+                    } else {
+                        self.delegate?.cancelledAction(self)
                     }
                 }
-            }
-        }
-    }
-    
-    /// A function intended to animate the selector and the options,
-    /// in case the user is not focusing a specific option.
-    private func loseFocusFromOptions() {
-        selectedItem = nil
-        UIView.animate(withDuration: 0.3) {
-            for (idx, view) in self.optionsView.subviews.enumerated() {
-                view.frame = CGRect(x: self.xPosition(for: idx), y: self.config.spacing, sideSize: self.config.size)
             }
         }
     }
@@ -165,7 +148,7 @@ open class EmojiSelectorView: UIButton {
     ///
     /// - Parameter index: The index of the option in the dataset.
     private func focusOption(withIndex index: Int) {
-        guard index >= 0 && index < dataset.count else { return }
+        guard (0..<dataset.count).contains(index) else { return }
         selectedItem = index
         let config = self.config
         var last: CGFloat = index != 0 ? config.spacing : 0
@@ -200,14 +183,8 @@ open class EmojiSelectorView: UIButton {
     
     /// Reset the UI to the initial state.
     private func reset() {
-        originPoint = superview?.convert(frame.origin, to: nil) ?? .zero
-        
-        if originPoint != frame.origin {
-            backgroundView.frame.origin.x -= originPoint.x
-            backgroundView.frame.origin.y -= originPoint.y
-        }
-        
-        UIApplication.shared.keyWindow?.rootViewController?.view.addSubview(backgroundView)
+        originPoint = rootView?.convert(frame.origin, to: nil) ?? .zero
+        rootView?.addSubview(backgroundView)
         
         let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
         let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - optionsViewSize.height)

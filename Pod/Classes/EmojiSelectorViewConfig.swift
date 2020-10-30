@@ -27,11 +27,11 @@ public extension EmojiSelectorView {
         let spaceBetweenComponents: CGFloat
 
         var heightForMinSize: CGFloat {
-            return minSize + 2 * spacing
+            minSize + 2 * spacing
         }
 
         var heightForSize: CGFloat {
-            return size + 2 * spacing
+            size + 2 * spacing
         }
 
         /// Creates an instance of `JOEmojiableConfig`
@@ -52,10 +52,10 @@ public extension EmojiSelectorView {
 
         /// A `default` definition of `JOEmojiable.Config`.
         public static let `default` = Config(spacing: 6,
-                                                        size: 40,
-                                                        minSize: 34,
-                                                        maxSize: 80,
-                                                        spaceBetweenComponents: 30)
+                                             size: 40,
+                                             minSize: 34,
+                                             maxSize: 80,
+                                             spaceBetweenComponents: 30)
     }
 
 }

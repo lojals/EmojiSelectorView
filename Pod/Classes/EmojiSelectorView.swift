@@ -74,7 +74,7 @@ public final class EmojiSelectorView: UIButton {
         case .began:
             expand()
         case .changed:
-            let point = sender.location(ofTouch: 0, in: rootView)
+            let point = sender.location(in: rootView)
             move(point)
         case .ended:
             collapse()
@@ -100,22 +100,22 @@ public final class EmojiSelectorView: UIButton {
             self.optionsView.alpha = 1
         }
         
-        for i in 0..<dataset.count {
-            let optionFrame = CGRect(x: xPosition(for: i), y: sizeBtn.height * 1.2,
+        for index in 0..<dataset.count {
+            let optionFrame = CGRect(x: xPosition(for: index), y: sizeBtn.height * 1.2,
                                      sideSize: sizeBeforeOpen)
             let option = UIImageView(frame: optionFrame)
-            option.image = UIImage(named: dataset[i].image)
+            option.image = UIImage(named: dataset[index].image)
             option.alpha = 0.6
             optionsView.addSubview(option)
             
-            UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut, animations: {
+            UIView.animate(index: index) {
                 option.frame.origin.y = config.spacing
                 option.alpha = 1
                 option.frame.size = CGSize(sideSize: config.size)
-                let sizeCenter = config.size / 2
+                let sizeCenter = config.size/2
                 option.center = CGPoint(x: optionFrame.origin.x + sizeCenter,
                                         y: config.spacing + sizeCenter)
-            }, completion: nil)
+            }
         }
     }
     
@@ -136,12 +136,12 @@ public final class EmojiSelectorView: UIButton {
     
     /// Function that collapse and close the Options Selector.
     private func collapse() {
-        for (i, option) in optionsView.subviews.enumerated() {
-            UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut) {
+        for (index, option) in optionsView.subviews.enumerated() {
+            UIView.animate(index: index) {
                 option.alpha = 0
                 option.frame.size = CGSize(sideSize: self.sizeBeforeOpen)
             } completion: { finished in
-                guard finished && i == (self.dataset.count/2) else { return }
+                guard finished, index == self.dataset.count/2 else { return }
                 self.isActive = false
                 self.backgroundView.removeFromSuperview()
                 self.optionsView.subviews.forEach { $0.removeFromSuperview() }
@@ -172,7 +172,7 @@ public final class EmojiSelectorView: UIButton {
                     view.center.y = centerYForOption
                     last += config.minSize
                 case index:
-                    view.frame = CGRect(x: last, y: -(config.maxSize/2), sideSize: config.maxSize)
+                    view.frame = CGRect(x: last, y: -config.maxSize/2, sideSize: config.maxSize)
                     last += config.maxSize
                 default:
                     view.center.y = centerYForOption

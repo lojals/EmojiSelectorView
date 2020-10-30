@@ -36,9 +36,8 @@ open class EmojiSelectorView: UIButton {
     public private (set) var selectedItem: Int?
     private var originPoint: CGPoint = .zero
 
-    private lazy var backgroundView: SelectorView = {
-        let backgroundView = SelectorView(frame: DesignConstants.screenRect)
-        backgroundView.delegate = self
+    private lazy var backgroundView: UIView = {
+        let backgroundView = UIView(frame: DesignConstants.screenRect)
         backgroundView.backgroundColor = .clear
         return backgroundView
     }()
@@ -78,8 +77,25 @@ open class EmojiSelectorView: UIButton {
     // MARK: - Visual component interaction / animation
 
     /// Function that open and expand the Options Selector.
-    @objc private func expand() {
-        guard !isActive else { return }
+    @objc private func expand(sender: UILongPressGestureRecognizer) {
+        if sender.state == .ended {
+            collapse()
+            return
+        }
+        
+        let point = sender.location(ofTouch: 0, in: UIApplication.shared.keyWindow?.rootViewController?.view)
+
+        guard !isActive else {
+            // Check if the point's position is inside the defined area.
+            if optionsView.contains(point) {
+                let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
+                focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
+            } else {
+                loseFocusFromOptions()
+            }
+            return
+        }
+        
         selectedItem = nil
         isActive = true
 
@@ -203,23 +219,5 @@ open class EmojiSelectorView: UIButton {
         optionsView.layer.shadowOpacity = 0.5
         optionsView.alpha               = 0.3
         backgroundView.addSubview(optionsView)
-    }
-}
-
-// MARK: - SelectorViewDelegate
-extension EmojiSelectorView: SelectorViewDelegate {
-
-    public func movedTo(_ point: CGPoint) {
-        // Check if the point's position is inside the defined area.
-        if optionsView.contains(point) {
-            let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
-            focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
-        } else {
-            loseFocusFromOptions()
-        }
-    }
-
-    public func endTouch(_ point: CGPoint) {
-        collapse()
     }
 }

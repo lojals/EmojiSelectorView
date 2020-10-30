@@ -79,45 +79,44 @@ open class EmojiSelectorView: UIButton {
 
     /// Function that open and expand the Options Selector.
     @objc private func expand() {
-        if !isActive {
-            selectedItem = nil
-            isActive = true
+        guard !isActive else { return }
+        selectedItem = nil
+        isActive = true
 
-            let config = self.config
-            let sizeBtn = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
-            resetUI()
+        let config = self.config
+        let sizeBtn = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
+        resetUI()
 
-            UIView.animate(withDuration: 0.2) {
-                self.optionsView.alpha = 1
-            }
+        UIView.animate(withDuration: 0.2) {
+            self.optionsView.alpha = 1
+        }
 
-            for i in 0..<dataset.count {
-                let optionFrame = CGRect(x: xPosition(for: i), y: sizeBtn.height * 1.2,
-                                         sideSize: DesignConstants.sizeBeforeOpen)
-                let option = UIImageView(frame: optionFrame)
-                option.image = UIImage(named: dataset[i].image)
-                option.alpha = 0.6
-                optionsView.addSubview(option)
-                
-                UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut, animations: {
-                    option.frame.origin.y = config.spacing
-                    option.alpha = 1
-                    option.frame.size = CGSize(sideSize: config.size)
-                    let sizeCenter = config.size / 2
-                    option.center = CGPoint(x: optionFrame.origin.x + sizeCenter,
-                                            y: config.spacing + sizeCenter)
-                }, completion: nil)
-            }
+        for i in 0..<dataset.count {
+            let optionFrame = CGRect(x: xPosition(for: i), y: sizeBtn.height * 1.2,
+                                     sideSize: DesignConstants.sizeBeforeOpen)
+            let option = UIImageView(frame: optionFrame)
+            option.image = UIImage(named: dataset[i].image)
+            option.alpha = 0.6
+            optionsView.addSubview(option)
+            
+            UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut, animations: {
+                option.frame.origin.y = config.spacing
+                option.alpha = 1
+                option.frame.size = CGSize(sideSize: config.size)
+                let sizeCenter = config.size / 2
+                option.center = CGPoint(x: optionFrame.origin.x + sizeCenter,
+                                        y: config.spacing + sizeCenter)
+            }, completion: nil)
         }
     }
 
     /// Function that collapse and close the Options Selector.
     private func collapse() {
         for (i, option) in optionsView.subviews.enumerated() {
-            UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.2, delay: 0.05 * Double(i), options: .curveEaseInOut) {
                 option.alpha = 0.3
                 option.frame.size = CGSize(sideSize: DesignConstants.sizeBeforeOpen)
-            }, completion: { (finished) -> Void in
+            } completion: { (finished) in
                 if finished && i == (self.dataset.count / 2) {
                     UIView.animate(withDuration: 0.1, animations: {
                         self.optionsView.alpha = 0
@@ -131,7 +130,7 @@ open class EmojiSelectorView: UIButton {
                         }
                     })
                 }
-            })
+            }
         }
     }
 
@@ -139,13 +138,9 @@ open class EmojiSelectorView: UIButton {
     /// in case the user is not focusing a specific option.
     private func loseFocusFromOptions() {
         selectedItem = nil
-        let config = self.config
         UIView.animate(withDuration: 0.3) {
-            let sizeBtn = CGSize(width: self.xPosition(for: self.dataset.count),
-                                 height: config.heightForSize)
-            self.optionsView.layer.cornerRadius = sizeBtn.height / 2
             for (idx, view) in self.optionsView.subviews.enumerated() {
-                view.frame = CGRect(x: self.xPosition(for: idx), y: config.spacing, sideSize: config.size)
+                view.frame = CGRect(x: self.xPosition(for: idx), y: self.config.spacing, sideSize: self.config.size)
             }
         }
     }
@@ -154,31 +149,25 @@ open class EmojiSelectorView: UIButton {
     ///
     /// - Parameter index: The index of the option in the dataset.
     private func focusOption(withIndex index: Int) {
-        if index >= 0 && index < dataset.count {
-            selectedItem = index
-            let config = self.config
-            UIView.animate(withDuration: 0.3) {
-                let previousOption = CGFloat(self.dataset.count - 1)
-                let sizeBtn = CGSize(width: previousOption * (config.spacing + config.minSize) + config.maxSize, height: config.heightForMinSize)
-                self.optionsView.layer.cornerRadius = sizeBtn.height / 2
-                var last: CGFloat = index != 0 ? config.spacing : 0
-
-                let minSizeCenter = config.minSize / 2
-                let centerYForOption = minSizeCenter + config.spacing
-
-                for (idx, view) in self.optionsView.subviews.enumerated() {
-                    view.frame = CGRect(x: last, y: config.spacing, sideSize: config.minSize)
-                    switch idx {
-                    case (index-1):
-                        view.center.y = minSizeCenter
-                        last += config.minSize
-                    case index:
-                        view.frame = CGRect(x: last, y: -(config.maxSize/2), sideSize: config.maxSize)
-                        last += config.maxSize
-                    default:
-                        view.center.y = centerYForOption
-                        last += config.minSize + config.spacing
-                    }
+        guard index >= 0 && index < dataset.count else { return }
+        selectedItem = index
+        let config = self.config
+        var last: CGFloat = index != 0 ? config.spacing : 0
+        let centerYForOption = optionsView.bounds.height/2
+        
+        UIView.animate(withDuration: 0.3) {
+            for (idx, view) in self.optionsView.subviews.enumerated() {
+                view.frame = CGRect(x: last, y: config.spacing, sideSize: config.minSize)
+                switch idx {
+                case (index-1):
+                    view.center.y = centerYForOption
+                    last += config.minSize
+                case index:
+                    view.frame = CGRect(x: last, y: -(config.maxSize/2), sideSize: config.maxSize)
+                    last += config.maxSize
+                default:
+                    view.center.y = centerYForOption
+                    last += config.minSize + config.spacing
                 }
             }
         }
@@ -201,8 +190,8 @@ open class EmojiSelectorView: UIButton {
             backgroundView.frame.origin.x -= originPoint.x
             backgroundView.frame.origin.y -= originPoint.y
         }
-
-        superview?.addSubview(backgroundView)
+        
+        UIApplication.shared.keyWindow?.rootViewController?.view.addSubview(backgroundView)
 
         let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
         let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - optionsViewSize.height)
@@ -221,17 +210,12 @@ open class EmojiSelectorView: UIButton {
 extension EmojiSelectorView: SelectorViewDelegate {
 
     public func movedTo(_ point: CGPoint) {
-        let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
-
         // Check if the point's position is inside the defined area.
-        if point.y < (optionsView.frame.minY - DesignConstants.bottomThresholdLoseFocus) || point.y > (optionsView.frame.maxY + DesignConstants.topThresholdLoseFocus) {
-            loseFocusFromOptions()
+        if optionsView.contains(point) {
+            let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
+            focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
         } else {
-            if point.x - originPoint.x > 0 && point.x < optionsView.frame.maxX {
-                focusOption(withIndex: Int(round((point.x - originPoint.x) / relativeSizePerOption)))
-            } else {
-                loseFocusFromOptions()
-            }
+            loseFocusFromOptions()
         }
     }
 

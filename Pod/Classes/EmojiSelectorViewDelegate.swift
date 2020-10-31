@@ -15,10 +15,17 @@ public protocol EmojiSelectorViewDelegate: class {
     /// - Parameters:
     ///   - sender: The `EmojiSelectorView` which is sending the action.
     ///   - index: Index of the selected option.
-    func selectedOption(_ sender: EmojiSelectorView, index: Int)
+    func emojiSelector(_ sender: EmojiSelectorView, didSelectedIndex index: Int)
 
+    /// The user is moving through the options.
+    /// - Parameters:
+    ///   - sender: The `EmojiSelectorView` which is sending the action.
+    ///   - index: Index of the selected option.
+    func emojiSelector(_ sender: EmojiSelectorView, didChangeFocusTo index: Int?)
+    
     /// The user cancelled the option selection.
     ///
     /// - Parameter sender: The `EmojiSelectorView` which is sending the action.
-    func cancelledAction(_ sender: EmojiSelectorView)
+    func emojiSelectorDidCancelledAction(_ sender: EmojiSelectorView)
+    
 }

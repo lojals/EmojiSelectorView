@@ -14,28 +14,24 @@ public final class EmojiSelectorView: UIButton {
     
     public weak var delegate: EmojiSelectorViewDelegate?
     
-    public let items: [EmojiSelectorViewOption]
+    public var items: [EmojiSelectorViewOption]
     
     private var isActive: Bool = false
     
-    public private (set) var selectedItem: Int?
-    
-    private lazy var backgroundView: UIView = {
-        let backgroundView = UIView(frame: UIScreen.main.bounds)
-        backgroundView.backgroundColor = .clear
-        return backgroundView
-    }()
+    public private (set) var selectedItem: Int? {
+        didSet {
+            delegate?.emojiSelector(self, didChangeFocusTo: selectedItem)
+        }
+    }
     
     private lazy var optionsView: UIView = {
-        let optionsViewSize = CGSize(width: xPosition(for: items.count), height: config.heightForSize)
-        let optionsView = UIView(frame: CGRect(origin: .zero, size: optionsViewSize))
-        optionsView.layer.cornerRadius = optionsView.frame.height / 2
+        let optionsView = UIView(frame: .zero)
+        optionsView.layer.cornerRadius = config.heightForSize/2
         optionsView.backgroundColor = .white
         optionsView.layer.shadowColor = UIColor.lightGray.cgColor
         optionsView.layer.shadowOffset = .zero
         optionsView.layer.shadowOpacity = 0.5
         optionsView.alpha = 0.3
-        backgroundView.addSubview(optionsView)
         return optionsView
     }()
     
@@ -44,8 +40,6 @@ public final class EmojiSelectorView: UIButton {
     private var rootView: UIView? {
         return UIApplication.shared.keyWindow?.rootViewController?.view
     }
-    
-    private var frrame: CGRect = .zero
     
     // MARK: - View lifecycle
     
@@ -64,9 +58,13 @@ public final class EmojiSelectorView: UIButton {
 
     }
     
-    @available(*, unavailable)
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.config = .default
+        self.items = []
+        super.init(coder: aDecoder)
+     
+        addGestureRecognizer(UILongPressGestureRecognizer(target: self,
+                                                          action: #selector(EmojiSelectorView.handlePress(sender:))))
     }
     
     // MARK: - Visual component interaction / animation
@@ -97,7 +95,7 @@ public final class EmojiSelectorView: UIButton {
         let config = self.config
         let sizeBtn = CGSize(width: xPosition(for: items.count), height: config.heightForSize)
         
-        rootView?.addSubview(backgroundView)
+        rootView?.addSubview(optionsView)
         
         UIView.animate(withDuration: 0.2) {
             self.optionsView.alpha = 1
@@ -146,12 +144,12 @@ public final class EmojiSelectorView: UIButton {
             } completion: { finished in
                 guard finished, index == self.items.count/2 else { return }
                 self.isActive = false
-                self.backgroundView.removeFromSuperview()
+                self.optionsView.removeFromSuperview()
                 self.optionsView.subviews.forEach { $0.removeFromSuperview() }
                 if let selectedItem = self.selectedItem {
-                    self.delegate?.selectedOption(self, index: selectedItem)
+                    self.delegate?.emojiSelector(self, didSelectedIndex: selectedItem)
                 } else {
-                    self.delegate?.cancelledAction(self)
+                    self.delegate?.emojiSelectorDidCancelledAction(self)
                 }
             }
         }
@@ -193,21 +191,4 @@ public final class EmojiSelectorView: UIButton {
         let option = CGFloat(option)
         return (option + 1) * config.spacing + config.size * option
     }
-}
-
-
-extension EmojiSelectorView.Config {
-    
-    func rect(items: Int, originalPos: CGPoint, trait: UITraitCollection) -> CGRect {
-        var originalPos = CGPoint(x: originalPos.x, y: originalPos.y - heightForSize - 10)
-        let option = CGFloat(items)
-        let width = (option + 1) * spacing + self.size * option
-        
-        if trait.horizontalSizeClass == .compact && trait.verticalSizeClass == .regular {
-            originalPos.x = (UIScreen.main.bounds.width - width) / 2
-        }
-        
-        return CGRect(origin: originalPos, size: CGSize(width: width, height: heightForSize))
-    }
-    
 }

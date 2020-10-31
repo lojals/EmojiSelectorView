@@ -71,29 +71,3 @@ extension SampleViewController: EmojiSelectorViewDataSource {
     }
     
 }
-
-
-class CustomSelectorView: EmojiSelectorView, EmojiSelectorViewDataSource {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        self.dataSource = self
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func numberOfOptions(in selector: EmojiSelectorView) -> Int {
-        return 12
-    }
-    
-    func emojiSelector(_ selector: EmojiSelectorView, viewForIndex index: Int) -> UIView {
-        return UIView()
-    }
-    
-    func emojiSelector(_ selector: EmojiSelectorView, nameForIndex index: Int) -> String {
-        return ""
-    }
-}

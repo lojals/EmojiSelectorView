@@ -31,10 +31,6 @@ open class EmojiSelectorView: UIButton {
     private lazy var optionsView: UIView = {
         let optionsView = UIView(frame: .zero)
         optionsView.layer.cornerRadius = config.heightForSize/2
-        optionsView.backgroundColor = .white
-        optionsView.layer.shadowColor = UIColor.lightGray.cgColor
-        optionsView.layer.shadowOffset = .zero
-        optionsView.layer.shadowOpacity = 0.5
         optionsView.alpha = 0.3
         return optionsView
     }()
@@ -87,23 +83,16 @@ open class EmojiSelectorView: UIButton {
     
     private func expand() {
         selectedItem = nil
-        
-        let count = _dataSource.numberOfOptions(in: self)
-        
-        let originPoint = rootView?.convert(frame.origin, to: nil) ?? .zero
-        optionsView.frame = config.rect(items: count,
-                                        originalPos: originPoint,
-                                        trait: UIScreen.main.traitCollection)
+        updateOptionsView(with: UIScreen.main.traitCollection)
         
         let config = self.config
-        
         rootView?.addSubview(optionsView)
         
         UIView.animate(withDuration: 0.2) {
             self.optionsView.alpha = 1
         }
         
-        for i in 0..<count {
+        for i in 0..<_dataSource.numberOfOptions(in: self) {
             let optionFrame = CGRect(x: xPosition(for: i), y: config.heightForSize * 1.2,
                                      sideSize: config.sizeBeforeOpen)
             let option = _dataSource.emojiSelector(self, viewForIndex: i)
@@ -191,5 +180,18 @@ open class EmojiSelectorView: UIButton {
     private func xPosition(for option: Int) -> CGFloat {
         let option = CGFloat(option)
         return (option + 1) * config.spacing + config.size * option
+    }
+    
+    private func updateOptionsView(with trait: UITraitCollection) {
+        let originPoint = superview?.convert(frame.origin, to: rootView) ?? .zero
+        
+        optionsView.backgroundColor = UIColor.background
+        optionsView.layer.shadowColor = UIColor.shadow.cgColor
+        optionsView.layer.shadowOpacity = 0.5
+        optionsView.layer.shadowOffset = .zero
+        
+        optionsView.frame = config.rect(items: _dataSource.numberOfOptions(in: self),
+                                        originalPos: originPoint,
+                                        trait: trait)
     }
 }

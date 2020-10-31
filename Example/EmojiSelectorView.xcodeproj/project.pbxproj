@@ -32,6 +32,7 @@
 		7ACF52BF254D31A900B00C8D /* img_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF52AD254D31A900B00C8D /* img_4@2x.png */; };
 		7ACF52C0254D31A900B00C8D /* img_4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF52AE254D31A900B00C8D /* img_4@3x.png */; };
 		7ACF52C1254D31A900B00C8D /* img_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF52AF254D31A900B00C8D /* img_6@2x.png */; };
+		7ADD2264254E0E030009B82F /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD2263254E0E030009B82F /* SampleTableViewController.swift */; };
 		A8F4813110821649BBB25B0D /* Pods_EmojiSelectorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EEA5B4A599E390747AC670 /* Pods_EmojiSelectorView_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		7ACF52AD254D31A900B00C8D /* img_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_4@2x.png"; sourceTree = "<group>"; };
 		7ACF52AE254D31A900B00C8D /* img_4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_4@3x.png"; sourceTree = "<group>"; };
 		7ACF52AF254D31A900B00C8D /* img_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_6@2x.png"; sourceTree = "<group>"; };
+		7ADD2263254E0E030009B82F /* SampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
 		896201CC5F9E13F3BEEB67AA /* Pods-EmojiSelectorView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiSelectorView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiSelectorView_Example/Pods-EmojiSelectorView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		95EEA5B4A599E390747AC670 /* Pods_EmojiSelectorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiSelectorView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C270B48A211A0387A65C0BFD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -129,12 +131,13 @@
 		607FACD21AFB9204008FA782 /* Example for EmojiSelectorView */ = {
 			isa = PBXGroup;
 			children = (
-				7ACF529D254D31A900B00C8D /* Assets */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* SampleViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				7ACF529D254D31A900B00C8D /* Assets */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				7ADD2263254E0E030009B82F /* SampleTableViewController.swift */,
+				607FACD71AFB9204008FA782 /* SampleViewController.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for EmojiSelectorView";
@@ -424,6 +427,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* SampleViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				7ADD2264254E0E030009B82F /* SampleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

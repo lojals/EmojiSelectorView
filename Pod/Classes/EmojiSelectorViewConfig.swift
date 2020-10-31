@@ -26,10 +26,6 @@ public extension EmojiSelectorView {
         /// The space between the `SelectorView` and the `InformationView`.
         let spaceBetweenComponents: CGFloat
 
-        var heightForMinSize: CGFloat {
-            minSize + 2 * spacing
-        }
-
         var heightForSize: CGFloat {
             size + 2 * spacing
         }

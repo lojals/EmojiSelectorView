@@ -29,3 +29,22 @@ public protocol EmojiSelectorViewDelegate: class {
     func emojiSelectorDidCancelledAction(_ sender: EmojiSelectorView)
     
 }
+
+/// Default implementation for delegate
+public extension EmojiSelectorViewDelegate {
+    func emojiSelector(_ sender: EmojiSelectorView, didSelectedIndex index: Int) {}
+    func emojiSelector(_ sender: EmojiSelectorView, didChangeFocusTo index: Int?) {}
+    func emojiSelectorDidCancelledAction(_ sender: EmojiSelectorView) {}
+}
+
+public protocol EmojiSelectorViewDataSource: class {
+    
+    /// Asks the data source to return the number of items in the EmojiSelectorView.
+    func numberOfOptions(in selector: EmojiSelectorView) -> Int
+
+    /// Asks the data source for the view of the specific item.
+    func emojiSelector(_ selector: EmojiSelectorView, viewForIndex index: Int) -> UIView
+    
+    /// Asks the data source for the name of the specific item.
+    func emojiSelector(_ selector: EmojiSelectorView, nameForIndex index: Int) -> String
+}

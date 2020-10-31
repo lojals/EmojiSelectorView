@@ -13,20 +13,19 @@ final class SampleViewController: UIViewController {
     @IBOutlet weak var selectorView: EmojiSelectorView!
     @IBOutlet weak var informationLabel: UILabel!
     
-    // MARK: Properties definition
     let optionsDataset = [
-        EmojiSelectorViewOption(image: "img_1", name: "dislike"),
-        EmojiSelectorViewOption(image: "img_2", name: "broken"),
-        EmojiSelectorViewOption(image: "img_3", name: "he he"),
-        EmojiSelectorViewOption(image: "img_4", name: "ooh"),
-        EmojiSelectorViewOption(image: "img_5", name: "meh!"),
-        EmojiSelectorViewOption(image: "img_6", name: "ahh!")
+        (imageName: "img_1", title: "Like"),
+        (imageName: "img_2", title: "Smile"),
+        (imageName: "img_3", title: "Heart"),
+        (imageName: "img_4", title: "Idea"),
+        (imageName: "img_5", title: "Slow"),
+        (imageName: "img_6", title: "Fast")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectorView.items = optionsDataset
         selectorView.delegate = self
+        selectorView.dataSource = self
     }
 
 }
@@ -50,4 +49,25 @@ extension SampleViewController: EmojiSelectorViewDelegate {
         informationLabel.text = "User cancelled selection"
     }
 
+}
+
+// MARK: EmojiSelectorViewDataSource
+extension SampleViewController: EmojiSelectorViewDataSource {
+    
+    func numberOfOptions(in selector: EmojiSelectorView) -> Int {
+        optionsDataset.count
+    }
+    
+    func emojiSelector(_ selector: EmojiSelectorView, viewForIndex index: Int) -> UIView {
+        let option = optionsDataset[index].imageName
+        guard let image = UIImage(named: option) else {
+            return UIView()
+        }
+        return UIImageView(image: image)
+    }
+    
+    func emojiSelector(_ selector: EmojiSelectorView, nameForIndex index: Int) -> String {
+        optionsDataset[index].title
+    }
+    
 }

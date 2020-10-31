@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/lojals/EmojiSelectorView.git", :tag => s.version.to_s }
   s.social_media_url = 'https://github.com/lojals'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   s.swift_version    = '5.0'
 

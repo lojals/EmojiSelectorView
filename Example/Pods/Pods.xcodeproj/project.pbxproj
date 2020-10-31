@@ -22,7 +22,6 @@
 		934EB4B96C029D7A175A99E83A86A4B0 /* Pods-EmojiSelectorView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C39957D3F4186F0D3CC7D4CC2C3F7C /* Pods-EmojiSelectorView_Example-dummy.m */; };
 		9535F05FA147D752969BD8030047EAD5 /* EmojiSelectorView.Config+rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F3F0B78AFC7EC63B79564EE5D28982 /* EmojiSelectorView.Config+rect.swift */; };
 		A12D07D733A8A82617F24091A2644435 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		BE662EF929C8AB8E7949647825AAAEA7 /* EmojiSelectorViewOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D117D630A279FAA616B20ECA33EDC /* EmojiSelectorViewOption.swift */; };
 		DF8B036F698B8368F5BAB58C5389CF3B /* CGRect+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00FB1F9E33C4EE236407BFDFE25400 /* CGRect+init.swift */; };
 		F37F1BF47391493AB0DCC964EE0AE3FF /* EmojiSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA8C96CB08B7154D9CCE56ED69364C /* EmojiSelectorView.swift */; };
 		F8B9F90FC1C5B94FECCB2A6D663BB68D /* Pods-EmojiSelectorView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F963A73C8AEEBF4C4FCDCAA70B5609 /* Pods-EmojiSelectorView_Tests-dummy.m */; };
@@ -63,7 +62,6 @@
 		23039DB12E2FEDA53DBC0E390044E3BB /* EmojiSelectorView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiSelectorView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A8597A8FD4EAE7F466E05F1E0756B5 /* Pods-EmojiSelectorView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EmojiSelectorView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2B974A932DB5242E1EE1D30EAC0DD402 /* EmojiSelectorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EmojiSelectorView.modulemap; sourceTree = "<group>"; };
-		2D2D117D630A279FAA616B20ECA33EDC /* EmojiSelectorViewOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiSelectorViewOption.swift; path = Pod/Classes/EmojiSelectorViewOption.swift; sourceTree = "<group>"; };
 		2F1778D903D53B5C4E5B56404D75B865 /* EmojiSelectorViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmojiSelectorViewDelegate.swift; path = Pod/Classes/EmojiSelectorViewDelegate.swift; sourceTree = "<group>"; };
 		307A897011155D7FAA8449E24E758267 /* EmojiSelectorView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EmojiSelectorView-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,7 +137,6 @@
 				B5CA8C96CB08B7154D9CCE56ED69364C /* EmojiSelectorView.swift */,
 				0406831EA441661D97BE55D597C24DB9 /* EmojiSelectorViewConfig.swift */,
 				2F1778D903D53B5C4E5B56404D75B865 /* EmojiSelectorViewDelegate.swift */,
-				2D2D117D630A279FAA616B20ECA33EDC /* EmojiSelectorViewOption.swift */,
 				20D7C036FD46743A50923B1639AB341C /* Extensions */,
 				33D6841A6A6E5DCAC5227E8AE596D547 /* Pod */,
 				F04CE4DDF61D8AF7E84DC3B6F157FE86 /* Support Files */,
@@ -469,7 +466,6 @@
 				F37F1BF47391493AB0DCC964EE0AE3FF /* EmojiSelectorView.swift in Sources */,
 				1806FA78885927B8DCE0CE08CB3C91F3 /* EmojiSelectorViewConfig.swift in Sources */,
 				6F611BD4D582E14D5CFA4A158DFEDCA5 /* EmojiSelectorViewDelegate.swift in Sources */,
-				BE662EF929C8AB8E7949647825AAAEA7 /* EmojiSelectorViewOption.swift in Sources */,
 				43EB5A601CF524245F654A5E7447E40D /* UIView+animation.swift in Sources */,
 				535400CC279EBE3CB538CCD3CFB924B9 /* UIView+contains.swift in Sources */,
 			);

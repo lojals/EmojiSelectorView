@@ -16,6 +16,9 @@ public extension EmojiSelectorView {
 
         /// The default size for an option.
         let size: CGFloat
+        
+        /// The size of an option before expand.
+        let sizeBeforeOpen: CGFloat
 
         /// The minimum size when an option is being selected.
         let minSize: CGFloat
@@ -44,9 +47,10 @@ public extension EmojiSelectorView {
             self.minSize = minSize
             self.maxSize = maxSize
             self.spaceBetweenComponents = spaceBetweenComponents
+            self.sizeBeforeOpen = 10
         }
 
-        /// A `default` definition of `JOEmojiable.Config`.
+        /// A `default` definition of `EmojiSelectorView.Config`.
         public static let `default` = Config(spacing: 6,
                                              size: 40,
                                              minSize: 34,

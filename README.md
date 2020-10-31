@@ -79,9 +79,6 @@ view.addSubview(buttonSample2)
 Jorge Ovalle, jroz9105@gmail.com
 
 
-![image](http://stream1.gifsoup.com/webroot/animatedgifs/808678_o.gif)
-
-
 
 ## License
 

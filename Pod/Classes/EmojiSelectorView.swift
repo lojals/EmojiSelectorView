@@ -8,18 +8,23 @@
 import UIKit
 
 /// A type that represents the selector with options froma items.
-public final class EmojiSelectorView: UIButton {
-    
-    private let sizeBeforeOpen: CGFloat = 10
+open class EmojiSelectorView: UIButton {
     
     public weak var delegate: EmojiSelectorViewDelegate?
     public weak var dataSource: EmojiSelectorViewDataSource?
     
-    private var isActive: Bool = false
+    private var _dataSource: EmojiSelectorViewDataSource {
+        guard let dataSource = dataSource else {
+            fatalError("❌ Please set up a datasource for the EmojiSelectorView")
+        }
+        return dataSource
+    }
     
-    public private (set) var selectedItem: Int? {
+    private var selectedItem: Int? {
         didSet {
-            delegate?.emojiSelector(self, didChangeFocusTo: selectedItem)
+            if oldValue != selectedItem {
+                delegate?.emojiSelector(self, didChangeFocusTo: selectedItem)
+            }
         }
     }
     
@@ -81,22 +86,16 @@ public final class EmojiSelectorView: UIButton {
     }
     
     private func expand() {
-        guard let dataSource = dataSource else {
-            return
-        }
-        
         selectedItem = nil
-        isActive = true
         
-        let itemsCount = dataSource.numberOfOptions(in: self)
+        let count = _dataSource.numberOfOptions(in: self)
         
         let originPoint = rootView?.convert(frame.origin, to: nil) ?? .zero
-        optionsView.frame = config.rect(items: itemsCount,
+        optionsView.frame = config.rect(items: count,
                                         originalPos: originPoint,
                                         trait: UIScreen.main.traitCollection)
         
         let config = self.config
-        let sizeBtn = CGSize(width: xPosition(for: itemsCount), height: config.heightForSize)
         
         rootView?.addSubview(optionsView)
         
@@ -104,15 +103,15 @@ public final class EmojiSelectorView: UIButton {
             self.optionsView.alpha = 1
         }
         
-        for index in 0..<itemsCount {
-            let optionFrame = CGRect(x: xPosition(for: index), y: sizeBtn.height * 1.2,
-                                     sideSize: sizeBeforeOpen)
-            let option = dataSource.emojiSelector(self, viewForIndex: index)
+        for i in 0..<count {
+            let optionFrame = CGRect(x: xPosition(for: i), y: config.heightForSize * 1.2,
+                                     sideSize: config.sizeBeforeOpen)
+            let option = _dataSource.emojiSelector(self, viewForIndex: i)
             option.frame = optionFrame
             option.alpha = 0.6
             optionsView.addSubview(option)
             
-            UIView.animate(index: index) {
+            UIView.animate(index: i) {
                 option.frame.origin.y = config.spacing
                 option.alpha = 1
                 option.frame.size = CGSize(sideSize: config.size)
@@ -124,12 +123,9 @@ public final class EmojiSelectorView: UIButton {
     }
     
     private func move(_ point: CGPoint) {
-        guard let dataSource = dataSource else {
-            return
-        }
         // Check if the point's position is inside the defined area.
         if optionsView.contains(point) {
-            let relativeSizePerOption = optionsView.frame.width / CGFloat(dataSource.numberOfOptions(in: self))
+            let relativeSizePerOption = optionsView.frame.width / CGFloat(_dataSource.numberOfOptions(in: self))
             focusOption(withIndex: Int(round((point.x - optionsView.frame.minX) / relativeSizePerOption)))
         } else {
             selectedItem = nil
@@ -143,17 +139,14 @@ public final class EmojiSelectorView: UIButton {
     
     /// Function that collapse and close the Options Selector.
     private func collapse() {
-        
         for (index, option) in optionsView.subviews.enumerated() {
             UIView.animate(index: index) {
                 option.alpha = 0
-                option.frame.size = CGSize(sideSize: self.sizeBeforeOpen)
+                option.frame.size = CGSize(sideSize: self.config.sizeBeforeOpen)
             } completion: { finished in
-                guard let dataSource = self.dataSource, finished,
-                      index == dataSource.numberOfOptions(in: self)/2 else {
+                guard finished, index == self._dataSource.numberOfOptions(in: self)/2 else {
                     return
                 }
-                self.isActive = false
                 self.optionsView.removeFromSuperview()
                 self.optionsView.subviews.forEach { $0.removeFromSuperview() }
                 if let selectedItem = self.selectedItem {
@@ -169,25 +162,23 @@ public final class EmojiSelectorView: UIButton {
     ///
     /// - Parameter index: The index of the option in the items.
     private func focusOption(withIndex index: Int) {
-        guard let dataSource = dataSource, (0..<dataSource.numberOfOptions(in: self)).contains(index) else { return }
+        guard (0..<_dataSource.numberOfOptions(in: self)).contains(index) else { return }
         selectedItem = index
         let config = self.config
-        var last: CGFloat = index != 0 ? config.spacing : 0
-        let centerYForOption = optionsView.bounds.height/2
+        var xCarry: CGFloat = index != 0 ? config.spacing : 0
         
         UIView.animate(withDuration: 0.2) {
-            for (idx, view) in self.optionsView.subviews.enumerated() {
-                view.frame = CGRect(x: last, y: config.spacing, sideSize: config.minSize)
-                switch idx {
+            for (i, view) in self.optionsView.subviews.enumerated() {
+                view.frame = CGRect(x: xCarry, y: config.spacing, sideSize: config.minSize)
+                view.center.y = config.heightForSize/2
+                switch i {
                 case (index-1):
-                    view.center.y = centerYForOption
-                    last += config.minSize
+                    xCarry += config.minSize
                 case index:
-                    view.frame = CGRect(x: last, y: -config.maxSize/2, sideSize: config.maxSize)
-                    last += config.maxSize
+                    view.frame = CGRect(x: xCarry, y: -config.maxSize/2, sideSize: config.maxSize)
+                    xCarry += config.maxSize
                 default:
-                    view.center.y = centerYForOption
-                    last += config.minSize + config.spacing
+                    xCarry += config.minSize + config.spacing
                 }
             }
         }

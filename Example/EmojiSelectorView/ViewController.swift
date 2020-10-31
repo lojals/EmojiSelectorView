@@ -51,34 +51,16 @@ final class ViewController: UIViewController, EmojiSelectorViewDelegate {
         view.addSubview(label)
         view.addSubview(labelInfo)
 
-        // Sample 1 using `default` configuration.
+        // Sample using `default` configuration.
         let buttonSample1 = EmojiSelectorView(frame: CGRect(origin: CGPoint(x: 40, y: 200),
-                                                         size: DesignConstants.sampleButtonSize))
+                                                            size: DesignConstants.sampleButtonSize),
+                                              items: optionsDataset)
         buttonSample1.delegate = self
         buttonSample1.backgroundColor = DesignConstants.mainSampleColor
         buttonSample1.titleLabel?.font = DesignConstants.buttonFontLabel
         buttonSample1.layer.cornerRadius = DesignConstants.buttonCornerRadius
         buttonSample1.setTitle("Long-tap me!", for: [.normal])
-        buttonSample1.dataset = optionsDataset
         view.addSubview(buttonSample1)
-
-        // Sample 2 using custom configuration.
-        let config = EmojiSelectorView.Config(spacing: 2,
-                                       size: 30,
-                                       minSize: 34,
-                                       maxSize: 45,
-                                       spaceBetweenComponents: 30)
-
-        let buttonSample2 = EmojiSelectorView(frame: CGRect(origin: CGPoint(x: 40, y: 300),
-                                                         size: DesignConstants.sampleButtonSize),
-                                           config: config)
-        buttonSample2.delegate = self
-        buttonSample2.backgroundColor = DesignConstants.mainSampleColor
-        buttonSample2.titleLabel?.font = DesignConstants.buttonFontLabel
-        buttonSample2.layer.cornerRadius = DesignConstants.buttonCornerRadius
-        buttonSample2.setTitle("Long-tap me!", for: [.normal])
-        buttonSample2.dataset = optionsDataset
-        view.addSubview(buttonSample2)
     }
 
     // MARK: JOEmojiableDelegate

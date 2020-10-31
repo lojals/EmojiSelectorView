@@ -7,14 +7,14 @@
 
 import UIKit
 
-/// A type that represents the selector with options froma dataset.
+/// A type that represents the selector with options froma items.
 public final class EmojiSelectorView: UIButton {
     
     private let sizeBeforeOpen: CGFloat = 10
     
     public weak var delegate: EmojiSelectorViewDelegate?
     
-    public var dataset: [EmojiSelectorViewOption] = []
+    public let items: [EmojiSelectorViewOption]
     
     private var isActive: Bool = false
     
@@ -27,7 +27,7 @@ public final class EmojiSelectorView: UIButton {
     }()
     
     private lazy var optionsView: UIView = {
-        let optionsViewSize = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
+        let optionsViewSize = CGSize(width: xPosition(for: items.count), height: config.heightForSize)
         let optionsView = UIView(frame: CGRect(origin: .zero, size: optionsViewSize))
         optionsView.layer.cornerRadius = optionsView.frame.height / 2
         optionsView.backgroundColor = .white
@@ -45,6 +45,8 @@ public final class EmojiSelectorView: UIButton {
         return UIApplication.shared.keyWindow?.rootViewController?.view
     }
     
+    private var frrame: CGRect = .zero
+    
     // MARK: - View lifecycle
     
     /// Creates a new instace of `EmojiSelectorView`.
@@ -52,13 +54,14 @@ public final class EmojiSelectorView: UIButton {
     /// - Parameters:
     ///   - frame: Frame of the button will open the selector
     ///   - config: The custom configuration for the UI components.
-    public init(frame: CGRect, config: EmojiSelectorView.Config = .default) {
-        self.config = config
-        self.dataset = []
+    public init(frame: CGRect, items: [EmojiSelectorViewOption]) {
+        self.config = .default
+        self.items = items
         super.init(frame: frame)
         
         addGestureRecognizer(UILongPressGestureRecognizer(target: self,
                                                           action: #selector(EmojiSelectorView.handlePress(sender:))))
+
     }
     
     @available(*, unavailable)
@@ -86,25 +89,25 @@ public final class EmojiSelectorView: UIButton {
         selectedItem = nil
         isActive = true
         
-        let config = self.config
-        let sizeBtn = CGSize(width: xPosition(for: dataset.count), height: config.heightForSize)
-        
         let originPoint = rootView?.convert(frame.origin, to: nil) ?? .zero
-        rootView?.addSubview(backgroundView)
+        optionsView.frame = config.rect(items: items.count,
+                                        originalPos: originPoint,
+                                        trait: UIScreen.main.traitCollection)
         
-        let originalSize = optionsView.frame.size
-        let optionsViewOrigin = CGPoint(x: originPoint.x, y: originPoint.y - originalSize.height - 10)
-        optionsView.frame = CGRect(origin: optionsViewOrigin, size: originalSize)
+        let config = self.config
+        let sizeBtn = CGSize(width: xPosition(for: items.count), height: config.heightForSize)
+        
+        rootView?.addSubview(backgroundView)
         
         UIView.animate(withDuration: 0.2) {
             self.optionsView.alpha = 1
         }
         
-        for index in 0..<dataset.count {
+        for index in 0..<items.count {
             let optionFrame = CGRect(x: xPosition(for: index), y: sizeBtn.height * 1.2,
                                      sideSize: sizeBeforeOpen)
             let option = UIImageView(frame: optionFrame)
-            option.image = UIImage(named: dataset[index].image)
+            option.image = UIImage(named: items[index].image)
             option.alpha = 0.6
             optionsView.addSubview(option)
             
@@ -122,7 +125,7 @@ public final class EmojiSelectorView: UIButton {
     private func move(_ point: CGPoint) {
         // Check if the point's position is inside the defined area.
         if optionsView.contains(point) {
-            let relativeSizePerOption = optionsView.frame.width / CGFloat(dataset.count)
+            let relativeSizePerOption = optionsView.frame.width / CGFloat(items.count)
             focusOption(withIndex: Int(round((point.x - optionsView.frame.minX) / relativeSizePerOption)))
         } else {
             selectedItem = nil
@@ -141,7 +144,7 @@ public final class EmojiSelectorView: UIButton {
                 option.alpha = 0
                 option.frame.size = CGSize(sideSize: self.sizeBeforeOpen)
             } completion: { finished in
-                guard finished, index == self.dataset.count/2 else { return }
+                guard finished, index == self.items.count/2 else { return }
                 self.isActive = false
                 self.backgroundView.removeFromSuperview()
                 self.optionsView.subviews.forEach { $0.removeFromSuperview() }
@@ -156,9 +159,9 @@ public final class EmojiSelectorView: UIButton {
     
     /// When a user in focusing an option, that option should magnify.
     ///
-    /// - Parameter index: The index of the option in the dataset.
+    /// - Parameter index: The index of the option in the items.
     private func focusOption(withIndex index: Int) {
-        guard (0..<dataset.count).contains(index) else { return }
+        guard (0..<items.count).contains(index) else { return }
         selectedItem = index
         let config = self.config
         var last: CGFloat = index != 0 ? config.spacing : 0
@@ -182,12 +185,29 @@ public final class EmojiSelectorView: UIButton {
         }
     }
     
-    /// Calculate the `x` position for a given dataset option.
+    /// Calculate the `x` position for a given items option.
     ///
-    /// - Parameter option: the position of the option in the dataset. <0... dataset.count>.
+    /// - Parameter option: the position of the option in the items. <0... items.count>.
     /// - Returns: The x position for a given option.
     private func xPosition(for option: Int) -> CGFloat {
         let option = CGFloat(option)
         return (option + 1) * config.spacing + config.size * option
     }
+}
+
+
+extension EmojiSelectorView.Config {
+    
+    func rect(items: Int, originalPos: CGPoint, trait: UITraitCollection) -> CGRect {
+        var originalPos = CGPoint(x: originalPos.x, y: originalPos.y - heightForSize - 10)
+        let option = CGFloat(items)
+        let width = (option + 1) * spacing + self.size * option
+        
+        if trait.horizontalSizeClass == .compact && trait.verticalSizeClass == .regular {
+            originalPos.x = (UIScreen.main.bounds.width - width) / 2
+        }
+        
+        return CGRect(origin: originalPos, size: CGSize(width: width, height: heightForSize))
+    }
+    
 }

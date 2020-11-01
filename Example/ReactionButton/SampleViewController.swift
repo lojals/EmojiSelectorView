@@ -39,7 +39,7 @@ extension SampleViewController: ReactionButtonDelegate {
 
     func ReactionSelector(_ sender: ReactionButton, didChangeFocusTo index: Int?) {
         guard let index = index else {
-            informationLabel.text = "Lose focus"
+            informationLabel.text = "Lost Focus"
             return
         }
 

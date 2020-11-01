@@ -1,85 +1,78 @@
-# ReactionButton
+<p align="center">
+<a href='#'><img src="https://user-images.githubusercontent.com/6756995/97817645-5e0a3780-1c63-11eb-85be-519f76fc2beb.png"></a>
+</p>
+<p align="center">
+<a href='#'><img src="https://img.shields.io/badge/Language-%20Swift%20-FF00.svg"></a>
+<a href="http://cocoapods.org/pods/ReactionButton"><img src="https://img.shields.io/cocoapods/v/ReactionButton.svg?style=flat"></a>
+<a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-supported-FF00.svg?style=flat"></a>
+<br />
+<a href="https://raw.githubusercontent.com/onevcat/ReactionButton/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/ReactionButton.svg?style=flat"></a>
+<a href="http://cocoadocs.org/docsets/ReactionButton"><img src="https://img.shields.io/cocoapods/p/ReactionButton.svg?style=flat"></a>
+</p>
 
-[![Version](https://img.shields.io/cocoapods/v/ReactionButton.svg?style=flat)](http://cocoapods.org/pods/ReactionButton)
-[![License](https://img.shields.io/cocoapods/l/ReactionButton.svg?style=flat)](http://cocoapods.org/pods/ReactionButton)
-[![Platform](https://img.shields.io/cocoapods/p/ReactionButton.svg?style=flat)](http://cocoapods.org/pods/ReactionButton)
+<p align="center">Since Facebook introduced reactions in 2016, it became a standard in several applications as a way for users to interact with content. ReactionButton is a control that allows developers to add this functionality to their apps in an easy way.</p>
 
-## Usage
+## Features
+- [x] Support of Dark Mode
+- [x] Customizable layout using `ReactionButtonDelegateLayout`
+- [x] Extensible DataSource for the control
+- [x] Layout support for scrolling interfaces (UICollectionView/UITableView)
+- [x] Codable initializer for usage on storyboards
+- [x] Events
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-### 📱🍕📱🍕📱🍕📱🍕📱
-
- ---
+## Requirements
+* iOS 13.0+
+* Swift 5.0+
 
 ## Installation
 
-ReactionButton is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+* [Installation guide](https://github.com/lojals/ReactionButton/wiki/Installation-guide)
 
-```ruby
-pod "ReactionButton"
-```
-
-## Examples
+## Usage
 
 ### 1. Basic Instance
-This instance create a **ReactionButton** using `default`  ReactionButtonConfig.
-Images from  [Trump reactionpacks style](http://www.reactionpacks.com/packs/2c1a1e41-e9e9-407a-a532-3bfdfef6b3e6).
+There are multiple ways to instantiate a `ReactionButton`, using a frame, storyboards, or an empty convenience initializer.
 
 #### Example Code
 
 ```swift
-let optionsDataset = [
-    JOReactionableOption(image: "img_1", name: "img1"),
-    JOReactionableOption(image: "img_2", name: "img2"),
-    JOReactionableOption(image: "img_3", name: "img3"),
-    JOReactionableOption(image: "img_4", name: "img4"),
-    JOReactionableOption(image: "img_5", name: "img5"),
-    JOReactionableOption(image: "img_6", name: "img6")
-]
-
-let buttonSample1 = ReactionButton(frame: CGRect(origin: CGPoint(x: 40, y: 200), size: CGSize(width: 100, height: 50)))
-buttonSample1.delegate = self
-buttonSample1.backgroundColor = .green
-buttonSample1.dataset = optionsDataset
-view.addSubview(buttonSample1)
+let buttonSample = ReactionButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+buttonSample.dataSource = self
+view.addSubview(buttonSample)
 ```
 
-![Sample 1](https://user-images.githubusercontent.com/6756995/38659390-fa14b908-3dee-11e8-8885-df6828c07843.gif)
+![Basic usage](https://user-images.githubusercontent.com/6756995/97816507-652d4780-1c5b-11eb-8479-0d003197b149.gif)
+> Images from [Trump reactionpacks style](http://www.reactionpacks.com/packs/2c1a1e41-e9e9-407a-a532-3bfdfef6b3e6).
 
+### 2. Delegate
+The `ReactionButton` has a delegate to communicate events of option selection, option focus, and cancel of actions. To use it, set the `ReactionButtonDelegate` conform as a delegate.
 
-### 2. Custom styled instance
-#### Example Code
+```swift
+let buttonSample = ReactionButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+buttonSample.delegate = self
+view.addSubview(buttonSample)
+```
+![Delegate example](https://user-images.githubusercontent.com/6756995/97816887-4e3c2480-1c5e-11eb-9028-5fed1ed22458.gif)
+> Images from [Trump reactionpacks style](http://www.reactionpacks.com/packs/2c1a1e41-e9e9-407a-a532-3bfdfef6b3e6).
 
-With this instance you can fully custom your component. Following the **JOReactionableConfig** variables.
+### 3. Custom layout instance
+`ReactionButton` allows customization of the layout with the help of `ReactionButtonDelegateLayout`. To use it, please conform to that protocol and set it as delegate (Same pattern as UICollectionView).
 
+```swift
+func ReactionSelectorConfiguration(_ selector: ReactionButton) -> ReactionButton.Config {
+  ReactionButton.Config(spacing: 2,
+                        size: 30,
+                        minSize: 34,
+                        maxSize: 45,
+                        spaceBetweenComponents: 30)
+}
+```
 You can custom your selector with the following variables, used in the 
 
-![687474703a2f2f692e696d6775722e636f6d2f65347a616179652e706e673f31](https://user-images.githubusercontent.com/6756995/38659568-b0955e30-3def-11e8-85fb-317b3f4cbc36.png)
+![Map 1](https://user-images.githubusercontent.com/6756995/38659568-b0955e30-3def-11e8-85fb-317b3f4cbc36.png)
 
-![image](http://i.imgur.com/yNfyP3c.png?1)
+![New](https://user-images.githubusercontent.com/6756995/97817123-0cac7900-1c60-11eb-8df3-09ba7c19908b.png)
 
-```swift
-let config = JOReactionableConfig(spacing: 2,
-                                size: 30,
-                                minSize: 34,
-                                maxSize: 45,
-                                spaceBetweenComponents: 30)
-
-let buttonSample2 = ReactionButton(frame: CGRect(origin: CGPoint(x: 40, y: 300), size: CGSize(width: 100, height: 50)), config: config)
-buttonSample2.delegate = self
-buttonSample2.backgroundColor = .green
-buttonSample2.dataset = optionsDataset
-view.addSubview(buttonSample2)
-```
 
 ## Author
-
 Jorge Ovalle, jroz9105@gmail.com
-
-
-
-## License
-
-ReactionButton is available under the MIT license. See the LICENSE file for more info.

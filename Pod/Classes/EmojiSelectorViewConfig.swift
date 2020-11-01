@@ -26,9 +26,6 @@ public extension EmojiSelectorView {
         /// The maximum size when the option is beign selected.
         let maxSize: CGFloat
 
-        /// The space between the `SelectorView` and the `InformationView`.
-        let spaceBetweenComponents: CGFloat
-
         var heightForSize: CGFloat {
             size + 2 * spacing
         }
@@ -41,12 +38,11 @@ public extension EmojiSelectorView {
         ///   - minSize: The minimum size when an option is being selected.
         ///   - maxSize: The maximum size when the option is beign selected.
         ///   - spaceBetweenComponents: The space between the `SelectorView` and the `InformationView`.
-        public init(spacing: CGFloat, size: CGFloat, minSize: CGFloat, maxSize: CGFloat, spaceBetweenComponents: CGFloat) {
+        public init(spacing: CGFloat, size: CGFloat, minSize: CGFloat, maxSize: CGFloat) {
             self.spacing  = spacing
             self.size = size
             self.minSize = minSize
             self.maxSize = maxSize
-            self.spaceBetweenComponents = spaceBetweenComponents
             self.sizeBeforeOpen = 10
         }
 
@@ -54,8 +50,7 @@ public extension EmojiSelectorView {
         public static let `default` = Config(spacing: 6,
                                              size: 40,
                                              minSize: 34,
-                                             maxSize: 80,
-                                             spaceBetweenComponents: 30)
+                                             maxSize: 80)
     }
 
 }

@@ -2,7 +2,7 @@
 //  EmojiSelectorView.swift
 //  EmojiSelectorView
 //
-//  Created by Jorge Raul Ovalle Zuleta on 2/28/16.
+//  Created by Jorge R Ovalle Z on 2/28/16.
 //
 
 import UIKit
@@ -28,14 +28,19 @@ open class EmojiSelectorView: UIButton {
         }
     }
     
-    private lazy var optionsView: UIView = {
-        let optionsView = UIView(frame: .zero)
-        optionsView.layer.cornerRadius = config.heightForSize/2
-        optionsView.alpha = 0.3
-        return optionsView
+    private lazy var optionsBarView: UIView = {
+        let optionsBarView = UIView(frame: .zero)
+        optionsBarView.layer.cornerRadius = config.heightForSize/2
+        optionsBarView.alpha = 0.3
+        return optionsBarView
     }()
     
-    private let config: EmojiSelectorView.Config
+    private var config: EmojiSelectorView.Config {
+        guard let delegate = delegate as? EmojiSelectorViewDelegateLayout else {
+            return .default
+        }
+        return delegate.emojiSelectorConfiguration(self)
+    }
     
     private var rootView: UIView? {
         UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.view
@@ -43,24 +48,27 @@ open class EmojiSelectorView: UIButton {
     
     // MARK: - View lifecycle
     
+    /// Creates a new instance of `EmojiSelectorView`.
+    public convenience init() {
+        self.init(frame: .zero)
+    }
+    
     /// Creates a new instace of `EmojiSelectorView`.
     ///
     /// - Parameters:
     ///   - frame: Frame of the button will open the selector
     ///   - config: The custom configuration for the UI components.
     public override init(frame: CGRect) {
-        self.config = .default
         super.init(frame: frame)
-        
-        addGestureRecognizer(UILongPressGestureRecognizer(target: self,
-                                                          action: #selector(EmojiSelectorView.handlePress(sender:))))
-
+        setup()
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        self.config = .default
         super.init(coder: aDecoder)
-     
+        setup()
+    }
+    
+    private func setup() {
         addGestureRecognizer(UILongPressGestureRecognizer(target: self,
                                                           action: #selector(EmojiSelectorView.handlePress(sender:))))
     }
@@ -86,10 +94,10 @@ open class EmojiSelectorView: UIButton {
         updateOptionsView(with: UIScreen.main.traitCollection)
         
         let config = self.config
-        rootView?.addSubview(optionsView)
+        rootView?.addSubview(optionsBarView)
         
         UIView.animate(withDuration: 0.2) {
-            self.optionsView.alpha = 1
+            self.optionsBarView.alpha = 1
         }
         
         for i in 0..<_dataSource.numberOfOptions(in: self) {
@@ -98,8 +106,8 @@ open class EmojiSelectorView: UIButton {
             let option = _dataSource.emojiSelector(self, viewForIndex: i)
             option.frame = optionFrame
             option.alpha = 0.6
-            optionsView.addSubview(option)
-            
+            optionsBarView.addSubview(option)
+
             UIView.animate(index: i) {
                 option.frame.origin.y = config.spacing
                 option.alpha = 1
@@ -113,13 +121,13 @@ open class EmojiSelectorView: UIButton {
     
     private func move(_ point: CGPoint) {
         // Check if the point's position is inside the defined area.
-        if optionsView.contains(point) {
-            let relativeSizePerOption = optionsView.frame.width / CGFloat(_dataSource.numberOfOptions(in: self))
-            focusOption(withIndex: Int(round((point.x - optionsView.frame.minX) / relativeSizePerOption)))
+        if optionsBarView.contains(point) {
+            let relativeSizePerOption = optionsBarView.frame.width / CGFloat(_dataSource.numberOfOptions(in: self))
+            focusOption(withIndex: Int(round((point.x - optionsBarView.frame.minX) / relativeSizePerOption)))
         } else {
             selectedItem = nil
             UIView.animate(withDuration: 0.2) {
-                for (idx, view) in self.optionsView.subviews.enumerated() {
+                for (idx, view) in self.optionsBarView.subviews.enumerated() {
                     view.frame = CGRect(x: self.xPosition(for: idx), y: self.config.spacing, sideSize: self.config.size)
                 }
             }
@@ -128,7 +136,7 @@ open class EmojiSelectorView: UIButton {
     
     /// Function that collapse and close the Options Selector.
     private func collapse() {
-        for (index, option) in optionsView.subviews.enumerated() {
+        for (index, option) in optionsBarView.subviews.enumerated() {
             UIView.animate(index: index) {
                 option.alpha = 0
                 option.frame.size = CGSize(sideSize: self.config.sizeBeforeOpen)
@@ -136,8 +144,8 @@ open class EmojiSelectorView: UIButton {
                 guard finished, index == self._dataSource.numberOfOptions(in: self)/2 else {
                     return
                 }
-                self.optionsView.removeFromSuperview()
-                self.optionsView.subviews.forEach { $0.removeFromSuperview() }
+                self.optionsBarView.removeFromSuperview()
+                self.optionsBarView.subviews.forEach { $0.removeFromSuperview() }
                 if let selectedItem = self.selectedItem {
                     self.delegate?.emojiSelector(self, didSelectedIndex: selectedItem)
                 } else {
@@ -157,14 +165,14 @@ open class EmojiSelectorView: UIButton {
         var xCarry: CGFloat = index != 0 ? config.spacing : 0
         
         UIView.animate(withDuration: 0.2) {
-            for (i, view) in self.optionsView.subviews.enumerated() {
-                view.frame = CGRect(x: xCarry, y: config.spacing, sideSize: config.minSize)
-                view.center.y = config.heightForSize/2
+            for (i, optionView) in self.optionsBarView.subviews.enumerated() {
+                optionView.frame = CGRect(x: xCarry, y: config.spacing, sideSize: config.minSize)
+                optionView.center.y = config.heightForSize/2
                 switch i {
                 case (index-1):
                     xCarry += config.minSize
                 case index:
-                    view.frame = CGRect(x: xCarry, y: -config.maxSize/2, sideSize: config.maxSize)
+                    optionView.frame = CGRect(x: xCarry, y: -config.maxSize/2, sideSize: config.maxSize)
                     xCarry += config.maxSize
                 default:
                     xCarry += config.minSize + config.spacing
@@ -185,12 +193,12 @@ open class EmojiSelectorView: UIButton {
     private func updateOptionsView(with trait: UITraitCollection) {
         let originPoint = superview?.convert(frame.origin, to: rootView) ?? .zero
         
-        optionsView.backgroundColor = UIColor.background
-        optionsView.layer.shadowColor = UIColor.shadow.cgColor
-        optionsView.layer.shadowOpacity = 0.5
-        optionsView.layer.shadowOffset = .zero
+        optionsBarView.backgroundColor = UIColor.background
+        optionsBarView.layer.shadowColor = UIColor.shadow.cgColor
+        optionsBarView.layer.shadowOpacity = 0.5
+        optionsBarView.layer.shadowOffset = .zero
         
-        optionsView.frame = config.rect(items: _dataSource.numberOfOptions(in: self),
+        optionsBarView.frame = config.rect(items: _dataSource.numberOfOptions(in: self),
                                         originalPos: originPoint,
                                         trait: trait)
     }

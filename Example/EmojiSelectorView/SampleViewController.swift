@@ -2,7 +2,7 @@
 //  SampleViewController.swift
 //  EmojiSelectorView
 //
-//  Created by Jorge Raul Ovalle Zuleta on 2/28/16.
+//  Created by Jorge R Ovalle Z on 2/28/16.
 //
 
 import UIKit
@@ -32,6 +32,7 @@ final class SampleViewController: UIViewController {
 
 // MARK: EmojiSelectorViewDelegate
 extension SampleViewController: EmojiSelectorViewDelegate {
+    
     func emojiSelector(_ sender: EmojiSelectorView, didSelectedIndex index: Int) {
         informationLabel.text = "Option \(index) selected"
     }

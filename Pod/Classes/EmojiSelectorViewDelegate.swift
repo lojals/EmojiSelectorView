@@ -30,6 +30,16 @@ public protocol EmojiSelectorViewDelegate: class {
     
 }
 
+public protocol EmojiSelectorViewDelegateLayout: EmojiSelectorViewDelegate {
+    func emojiSelectorConfiguration(_ selector: EmojiSelectorView) -> EmojiSelectorView.Config
+}
+
+public extension EmojiSelectorViewDelegateLayout {
+    func emojiSelectorConfiguration(_ selector: EmojiSelectorView) -> EmojiSelectorView.Config {
+        .default
+    }
+}
+
 /// Default implementation for delegate
 public extension EmojiSelectorViewDelegate {
     func emojiSelector(_ sender: EmojiSelectorView, didSelectedIndex index: Int) {}

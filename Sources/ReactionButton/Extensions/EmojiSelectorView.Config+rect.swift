@@ -5,7 +5,7 @@
 //  Created by Jorge Ovalle on 30/10/20.
 //
 
-import Foundation
+import UIKit
 
 extension ReactionButton.Config {
     

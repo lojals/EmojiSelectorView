@@ -1,16 +1,16 @@
 //
 //  SampleViewController.swift
-//  EmojiSelectorView
+//  ReactionButton
 //
 //  Created by Jorge R Ovalle Z on 2/28/16.
 //
 
 import UIKit
-import EmojiSelectorView
+import ReactionButton
 
 final class SampleViewController: UIViewController {
 
-    @IBOutlet weak var selectorView: EmojiSelectorView!
+    @IBOutlet weak var selectorView: ReactionButton!
     @IBOutlet weak var informationLabel: UILabel!
     
     let optionsDataset = [
@@ -30,14 +30,14 @@ final class SampleViewController: UIViewController {
 
 }
 
-// MARK: EmojiSelectorViewDelegate
-extension SampleViewController: EmojiSelectorViewDelegate {
+// MARK: ReactionButtonDelegate
+extension SampleViewController: ReactionButtonDelegate {
     
-    func emojiSelector(_ sender: EmojiSelectorView, didSelectedIndex index: Int) {
+    func ReactionSelector(_ sender: ReactionButton, didSelectedIndex index: Int) {
         informationLabel.text = "Option \(index) selected"
     }
 
-    func emojiSelector(_ sender: EmojiSelectorView, didChangeFocusTo index: Int?) {
+    func ReactionSelector(_ sender: ReactionButton, didChangeFocusTo index: Int?) {
         guard let index = index else {
             informationLabel.text = "Lose focus"
             return
@@ -46,20 +46,20 @@ extension SampleViewController: EmojiSelectorViewDelegate {
         informationLabel.text = "Focused on \(index) option"
     }
 
-    func emojiSelectorDidCancelledAction(_ sender: EmojiSelectorView) {
+    func ReactionSelectorDidCancelledAction(_ sender: ReactionButton) {
         informationLabel.text = "User cancelled selection"
     }
 
 }
 
-// MARK: EmojiSelectorViewDataSource
-extension SampleViewController: EmojiSelectorViewDataSource {
+// MARK: ReactionButtonDataSource
+extension SampleViewController: ReactionButtonDataSource {
     
-    func numberOfOptions(in selector: EmojiSelectorView) -> Int {
+    func numberOfOptions(in selector: ReactionButton) -> Int {
         optionsDataset.count
     }
     
-    func emojiSelector(_ selector: EmojiSelectorView, viewForIndex index: Int) -> UIView {
+    func ReactionSelector(_ selector: ReactionButton, viewForIndex index: Int) -> UIView {
         let option = optionsDataset[index].imageName
         guard let image = UIImage(named: option) else {
             return UIView()
@@ -67,7 +67,7 @@ extension SampleViewController: EmojiSelectorViewDataSource {
         return UIImageView(image: image)
     }
     
-    func emojiSelector(_ selector: EmojiSelectorView, nameForIndex index: Int) -> String {
+    func ReactionSelector(_ selector: ReactionButton, nameForIndex index: Int) -> String {
         optionsDataset[index].title
     }
     

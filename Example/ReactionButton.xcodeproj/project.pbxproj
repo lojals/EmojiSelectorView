@@ -13,7 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6CDA14413D15FF293F32AE0A /* Pods_EmojiSelectorView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351E55CD4A2FDEA989D65319 /* Pods_EmojiSelectorView_Tests.framework */; };
+		6CDA14413D15FF293F32AE0A /* Pods_ReactionButton_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351E55CD4A2FDEA989D65319 /* Pods_ReactionButton_Tests.framework */; };
 		7ACF52B0254D31A900B00C8D /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF529E254D31A900B00C8D /* img_1.png */; };
 		7ACF52B1254D31A900B00C8D /* img_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF529F254D31A900B00C8D /* img_1@3x.png */; };
 		7ACF52B2254D31A900B00C8D /* img_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF52A0254D31A900B00C8D /* img_3@2x.png */; };
@@ -33,7 +33,7 @@
 		7ACF52C0254D31A900B00C8D /* img_4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF52AE254D31A900B00C8D /* img_4@3x.png */; };
 		7ACF52C1254D31A900B00C8D /* img_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF52AF254D31A900B00C8D /* img_6@2x.png */; };
 		7ADD2264254E0E030009B82F /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD2263254E0E030009B82F /* SampleTableViewController.swift */; };
-		A8F4813110821649BBB25B0D /* Pods_EmojiSelectorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EEA5B4A599E390747AC670 /* Pods_EmojiSelectorView_Example.framework */; };
+		A8F4813110821649BBB25B0D /* Pods_ReactionButton_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EEA5B4A599E390747AC670 /* Pods_ReactionButton_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,23 +42,23 @@
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = EmojiSelectorView;
+			remoteInfo = ReactionButton;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		101AE47BC6731DC179008361 /* Pods-EmojiSelectorView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiSelectorView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiSelectorView_Tests/Pods-EmojiSelectorView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		31AF104F61726A4824CD7D70 /* Pods-EmojiSelectorView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiSelectorView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiSelectorView_Example/Pods-EmojiSelectorView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		351E55CD4A2FDEA989D65319 /* Pods_EmojiSelectorView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiSelectorView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41BF3925EBD79D4DA4D6746E /* EmojiSelectorView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EmojiSelectorView.podspec; path = ../EmojiSelectorView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		607FACD01AFB9204008FA782 /* EmojiSelectorView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiSelectorView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		101AE47BC6731DC179008361 /* Pods-ReactionButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactionButton_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactionButton_Tests/Pods-ReactionButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		31AF104F61726A4824CD7D70 /* Pods-ReactionButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactionButton_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactionButton_Example/Pods-ReactionButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		351E55CD4A2FDEA989D65319 /* Pods_ReactionButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactionButton_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41BF3925EBD79D4DA4D6746E /* ReactionButton.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ReactionButton.podspec; path = ../ReactionButton.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		607FACD01AFB9204008FA782 /* ReactionButton_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactionButton_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* EmojiSelectorView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiSelectorView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* ReactionButton_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactionButton_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		61D2E54C81E5775A6A4D887E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -81,10 +81,10 @@
 		7ACF52AE254D31A900B00C8D /* img_4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_4@3x.png"; sourceTree = "<group>"; };
 		7ACF52AF254D31A900B00C8D /* img_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_6@2x.png"; sourceTree = "<group>"; };
 		7ADD2263254E0E030009B82F /* SampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
-		896201CC5F9E13F3BEEB67AA /* Pods-EmojiSelectorView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiSelectorView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiSelectorView_Example/Pods-EmojiSelectorView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		95EEA5B4A599E390747AC670 /* Pods_EmojiSelectorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiSelectorView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		896201CC5F9E13F3BEEB67AA /* Pods-ReactionButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactionButton_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactionButton_Example/Pods-ReactionButton_Example.release.xcconfig"; sourceTree = "<group>"; };
+		95EEA5B4A599E390747AC670 /* Pods_ReactionButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactionButton_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C270B48A211A0387A65C0BFD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		DE3D7ABAD19542C0E0B84F33 /* Pods-EmojiSelectorView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiSelectorView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmojiSelectorView_Tests/Pods-EmojiSelectorView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE3D7ABAD19542C0E0B84F33 /* Pods-ReactionButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactionButton_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactionButton_Tests/Pods-ReactionButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8F4813110821649BBB25B0D /* Pods_EmojiSelectorView_Example.framework in Frameworks */,
+				A8F4813110821649BBB25B0D /* Pods_ReactionButton_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CDA14413D15FF293F32AE0A /* Pods_EmojiSelectorView_Tests.framework in Frameworks */,
+				6CDA14413D15FF293F32AE0A /* Pods_ReactionButton_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for EmojiSelectorView */,
+				607FACD21AFB9204008FA782 /* Example for ReactionButton */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				9918619326BD5D888853877F /* Pods */,
@@ -122,13 +122,13 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* EmojiSelectorView_Example.app */,
-				607FACE51AFB9204008FA782 /* EmojiSelectorView_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* ReactionButton_Example.app */,
+				607FACE51AFB9204008FA782 /* ReactionButton_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for EmojiSelectorView */ = {
+		607FACD21AFB9204008FA782 /* Example for ReactionButton */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -140,8 +140,8 @@
 				607FACD71AFB9204008FA782 /* SampleViewController.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for EmojiSelectorView";
-			path = EmojiSelectorView;
+			name = "Example for ReactionButton";
+			path = ReactionButton;
 			sourceTree = "<group>";
 		};
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
@@ -172,7 +172,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				41BF3925EBD79D4DA4D6746E /* EmojiSelectorView.podspec */,
+				41BF3925EBD79D4DA4D6746E /* ReactionButton.podspec */,
 				C270B48A211A0387A65C0BFD /* README.md */,
 				61D2E54C81E5775A6A4D887E /* LICENSE */,
 			);
@@ -207,8 +207,8 @@
 		8271F654EE4033C22823CD90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95EEA5B4A599E390747AC670 /* Pods_EmojiSelectorView_Example.framework */,
-				351E55CD4A2FDEA989D65319 /* Pods_EmojiSelectorView_Tests.framework */,
+				95EEA5B4A599E390747AC670 /* Pods_ReactionButton_Example.framework */,
+				351E55CD4A2FDEA989D65319 /* Pods_ReactionButton_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,10 +216,10 @@
 		9918619326BD5D888853877F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31AF104F61726A4824CD7D70 /* Pods-EmojiSelectorView_Example.debug.xcconfig */,
-				896201CC5F9E13F3BEEB67AA /* Pods-EmojiSelectorView_Example.release.xcconfig */,
-				DE3D7ABAD19542C0E0B84F33 /* Pods-EmojiSelectorView_Tests.debug.xcconfig */,
-				101AE47BC6731DC179008361 /* Pods-EmojiSelectorView_Tests.release.xcconfig */,
+				31AF104F61726A4824CD7D70 /* Pods-ReactionButton_Example.debug.xcconfig */,
+				896201CC5F9E13F3BEEB67AA /* Pods-ReactionButton_Example.release.xcconfig */,
+				DE3D7ABAD19542C0E0B84F33 /* Pods-ReactionButton_Tests.debug.xcconfig */,
+				101AE47BC6731DC179008361 /* Pods-ReactionButton_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -227,9 +227,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* EmojiSelectorView_Example */ = {
+		607FACCF1AFB9204008FA782 /* ReactionButton_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "EmojiSelectorView_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ReactionButton_Example" */;
 			buildPhases = (
 				D1AF8CF0DB203D8228D376D3 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -241,14 +241,14 @@
 			);
 			dependencies = (
 			);
-			name = EmojiSelectorView_Example;
-			productName = EmojiSelectorView;
-			productReference = 607FACD01AFB9204008FA782 /* EmojiSelectorView_Example.app */;
+			name = ReactionButton_Example;
+			productName = ReactionButton;
+			productReference = 607FACD01AFB9204008FA782 /* ReactionButton_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* EmojiSelectorView_Tests */ = {
+		607FACE41AFB9204008FA782 /* ReactionButton_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "EmojiSelectorView_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ReactionButton_Tests" */;
 			buildPhases = (
 				724B5750F860396815138A6E /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -261,9 +261,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = EmojiSelectorView_Tests;
+			name = ReactionButton_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* EmojiSelectorView_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* ReactionButton_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +287,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "EmojiSelectorView" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ReactionButton" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -301,8 +301,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* EmojiSelectorView_Example */,
-				607FACE41AFB9204008FA782 /* EmojiSelectorView_Tests */,
+				607FACCF1AFB9204008FA782 /* ReactionButton_Example */,
+				607FACE41AFB9204008FA782 /* ReactionButton_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,16 +352,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EmojiSelectorView_Example/Pods-EmojiSelectorView_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EmojiSelectorView/EmojiSelectorView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ReactionButton_Example/Pods-ReactionButton_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactionButton/ReactionButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmojiSelectorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmojiSelectorView_Example/Pods-EmojiSelectorView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactionButton_Example/Pods-ReactionButton_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		724B5750F860396815138A6E /* [CP] Check Pods Manifest.lock */ = {
@@ -375,7 +375,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EmojiSelectorView_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactionButton_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -388,16 +388,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EmojiSelectorView_Tests/Pods-EmojiSelectorView_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EmojiSelectorView/EmojiSelectorView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ReactionButton_Tests/Pods-ReactionButton_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactionButton/ReactionButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmojiSelectorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmojiSelectorView_Tests/Pods-EmojiSelectorView_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactionButton_Tests/Pods-ReactionButton_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1AF8CF0DB203D8228D376D3 /* [CP] Check Pods Manifest.lock */ = {
@@ -411,7 +411,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EmojiSelectorView_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactionButton_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -444,7 +444,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* EmojiSelectorView_Example */;
+			target = 607FACCF1AFB9204008FA782 /* ReactionButton_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -578,10 +578,10 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31AF104F61726A4824CD7D70 /* Pods-EmojiSelectorView_Example.debug.xcconfig */;
+			baseConfigurationReference = 31AF104F61726A4824CD7D70 /* Pods-ReactionButton_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = EmojiSelectorView/Info.plist;
+				INFOPLIST_FILE = ReactionButton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -594,10 +594,10 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 896201CC5F9E13F3BEEB67AA /* Pods-EmojiSelectorView_Example.release.xcconfig */;
+			baseConfigurationReference = 896201CC5F9E13F3BEEB67AA /* Pods-ReactionButton_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = EmojiSelectorView/Info.plist;
+				INFOPLIST_FILE = ReactionButton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -610,7 +610,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE3D7ABAD19542C0E0B84F33 /* Pods-EmojiSelectorView_Tests.debug.xcconfig */;
+			baseConfigurationReference = DE3D7ABAD19542C0E0B84F33 /* Pods-ReactionButton_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -628,13 +628,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmojiSelectorView_Example.app/EmojiSelectorView_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactionButton_Example.app/ReactionButton_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 101AE47BC6731DC179008361 /* Pods-EmojiSelectorView_Tests.release.xcconfig */;
+			baseConfigurationReference = 101AE47BC6731DC179008361 /* Pods-ReactionButton_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -648,14 +648,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmojiSelectorView_Example.app/EmojiSelectorView_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactionButton_Example.app/ReactionButton_Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "EmojiSelectorView" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "ReactionButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "EmojiSelectorView_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ReactionButton_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "EmojiSelectorView_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ReactionButton_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,

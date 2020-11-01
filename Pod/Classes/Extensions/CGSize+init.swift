@@ -1,6 +1,6 @@
 //
 //  CGSize+init.swift
-//  EmojiSelectorView
+//  ReactionButton
 //
 //  Created by Jorge R Ovalle Z on 4/7/18.
 //

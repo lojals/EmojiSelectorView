@@ -1,16 +1,16 @@
 PODS:
-  - EmojiSelectorView (4.0.0)
+  - ReactionButton (4.0.0)
 
 DEPENDENCIES:
-  - EmojiSelectorView (from `../`)
+  - ReactionButton (from `../`)
 
 EXTERNAL SOURCES:
-  EmojiSelectorView:
+  ReactionButton:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EmojiSelectorView: 54edeb0646f45013d6ff79e68290e54769c61ac8
+  ReactionButton: e6b4e85c9fcc241f123e55c16e85172844e21368
 
-PODFILE CHECKSUM: 928697acf9e5ca535d0967349d8d6904545adc18
+PODFILE CHECKSUM: 7418ca581c2e0f390ac3d8da4bb8888c4bc25faa
 
 COCOAPODS: 1.8.4

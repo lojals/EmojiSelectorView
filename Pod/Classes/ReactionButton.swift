@@ -1,6 +1,6 @@
 //
-//  EmojiSelectorView.swift
-//  EmojiSelectorView
+//  ReactionButton.swift
+//  ReactionButton
 //
 //  Created by Jorge R Ovalle Z on 2/28/16.
 //
@@ -8,14 +8,14 @@
 import UIKit
 
 /// A type that represents the selector with options froma items.
-open class EmojiSelectorView: UIButton {
+open class ReactionButton: UIButton {
     
-    public weak var delegate: EmojiSelectorViewDelegate?
-    public weak var dataSource: EmojiSelectorViewDataSource?
+    public weak var delegate: ReactionButtonDelegate?
+    public weak var dataSource: ReactionButtonDataSource?
     
-    private var _dataSource: EmojiSelectorViewDataSource {
+    private var _dataSource: ReactionButtonDataSource {
         guard let dataSource = dataSource else {
-            fatalError("❌ Please set up a datasource for the EmojiSelectorView")
+            fatalError("❌ Please set up a datasource for the ReactionButton")
         }
         return dataSource
     }
@@ -23,7 +23,7 @@ open class EmojiSelectorView: UIButton {
     private var selectedItem: Int? {
         didSet {
             if oldValue != selectedItem {
-                delegate?.emojiSelector(self, didChangeFocusTo: selectedItem)
+                delegate?.ReactionSelector(self, didChangeFocusTo: selectedItem)
             }
         }
     }
@@ -35,11 +35,11 @@ open class EmojiSelectorView: UIButton {
         return optionsBarView
     }()
     
-    private var config: EmojiSelectorView.Config {
-        guard let delegate = delegate as? EmojiSelectorViewDelegateLayout else {
+    private var config: ReactionButton.Config {
+        guard let delegate = delegate as? ReactionButtonDelegateLayout else {
             return .default
         }
-        return delegate.emojiSelectorConfiguration(self)
+        return delegate.ReactionSelectorConfiguration(self)
     }
     
     private var rootView: UIView? {
@@ -48,12 +48,12 @@ open class EmojiSelectorView: UIButton {
     
     // MARK: - View lifecycle
     
-    /// Creates a new instance of `EmojiSelectorView`.
+    /// Creates a new instance of `ReactionButton`.
     public convenience init() {
         self.init(frame: .zero)
     }
     
-    /// Creates a new instace of `EmojiSelectorView`.
+    /// Creates a new instace of `ReactionButton`.
     ///
     /// - Parameters:
     ///   - frame: Frame of the button will open the selector
@@ -70,7 +70,7 @@ open class EmojiSelectorView: UIButton {
     
     private func setup() {
         addGestureRecognizer(UILongPressGestureRecognizer(target: self,
-                                                          action: #selector(EmojiSelectorView.handlePress(sender:))))
+                                                          action: #selector(ReactionButton.handlePress(sender:))))
     }
     
     // MARK: - Visual component interaction / animation
@@ -103,7 +103,7 @@ open class EmojiSelectorView: UIButton {
         for i in 0..<_dataSource.numberOfOptions(in: self) {
             let optionFrame = CGRect(x: xPosition(for: i), y: config.heightForSize * 1.2,
                                      sideSize: config.sizeBeforeOpen)
-            let option = _dataSource.emojiSelector(self, viewForIndex: i)
+            let option = _dataSource.ReactionSelector(self, viewForIndex: i)
             option.frame = optionFrame
             option.alpha = 0.6
             optionsBarView.addSubview(option)
@@ -147,9 +147,9 @@ open class EmojiSelectorView: UIButton {
                 self.optionsBarView.removeFromSuperview()
                 self.optionsBarView.subviews.forEach { $0.removeFromSuperview() }
                 if let selectedItem = self.selectedItem {
-                    self.delegate?.emojiSelector(self, didSelectedIndex: selectedItem)
+                    self.delegate?.ReactionSelector(self, didSelectedIndex: selectedItem)
                 } else {
-                    self.delegate?.emojiSelectorDidCancelledAction(self)
+                    self.delegate?.ReactionSelectorDidCancelledAction(self)
                 }
             }
         }

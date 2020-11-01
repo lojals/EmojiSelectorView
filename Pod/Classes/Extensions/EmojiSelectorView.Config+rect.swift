@@ -1,13 +1,13 @@
 //
-//  EmojiSelectorView.Config+rect.swift
-//  EmojiSelectorView
+//  ReactionButton.Config+rect.swift
+//  ReactionButton
 //
 //  Created by Jorge Ovalle on 30/10/20.
 //
 
 import Foundation
 
-extension EmojiSelectorView.Config {
+extension ReactionButton.Config {
     
     func rect(items: Int, originalPos: CGPoint, trait: UITraitCollection) -> CGRect {
         var originalPos = CGPoint(x: originalPos.x, y: originalPos.y - heightForSize - 10)

@@ -1,13 +1,13 @@
 //
 //  SampleTableViewController.swift
-//  EmojiSelectorView_Example
+//  ReactionButton_Example
 //
 //  Created by Jorge Ovalle on 31/10/20.
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
 import UIKit
-import EmojiSelectorView
+import ReactionButton
 
 final class SampleTableViewController: UITableViewController {
     
@@ -26,7 +26,7 @@ final class SampleTableViewController: UITableViewController {
 
 }
 
-final class CustomSelectorView: EmojiSelectorView, EmojiSelectorViewDataSource {
+final class CustomSelectorView: ReactionButton, ReactionButtonDataSource {
     
     let optionsDataset = [
         (imageName: "img_1", title: "Like"),
@@ -47,11 +47,11 @@ final class CustomSelectorView: EmojiSelectorView, EmojiSelectorViewDataSource {
         self.dataSource = self
     }
     
-    func numberOfOptions(in selector: EmojiSelectorView) -> Int {
+    func numberOfOptions(in selector: ReactionButton) -> Int {
         optionsDataset.count
     }
     
-    func emojiSelector(_ selector: EmojiSelectorView, viewForIndex index: Int) -> UIView {
+    func ReactionSelector(_ selector: ReactionButton, viewForIndex index: Int) -> UIView {
         let option = optionsDataset[index].imageName
         guard let image = UIImage(named: option) else {
             return UIView()
@@ -59,7 +59,7 @@ final class CustomSelectorView: EmojiSelectorView, EmojiSelectorViewDataSource {
         return UIImageView(image: image)
     }
     
-    func emojiSelector(_ selector: EmojiSelectorView, nameForIndex index: Int) -> String {
+    func ReactionSelector(_ selector: ReactionButton, nameForIndex index: Int) -> String {
         optionsDataset[index].title
     }
 }

@@ -1,6 +1,6 @@
 //
 //  UIColor+Selector.swift
-//  EmojiSelectorView
+//  ReactionButton
 //
 //  Created by Jorge Ovalle on 31/10/20.
 //

@@ -5,7 +5,7 @@
 //  Created by Jorge Ovalle on 29/10/20.
 //
 
-import Foundation
+import UIKit
 
 extension UIView {
     static func animate(index: Int, animations: @escaping () -> Void, completion: ((Bool) -> Void)? = nil) {

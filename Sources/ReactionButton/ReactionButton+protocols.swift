@@ -5,7 +5,7 @@
 //  Created by Jorge R Ovalle Z on 4/11/18.
 //
 
-import Foundation
+import UIKit
 
 /// Describes a type that is informed of events occurring within a `ReactionButton`.
 public protocol ReactionButtonDelegate: class {

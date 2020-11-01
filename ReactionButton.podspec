@@ -15,8 +15,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   s.swift_version    = '5.0'
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ReactionButton' => ['Pod/Assets/*.png']
-  }
+  s.source_files = 'Sources/ReactionButton/**/*'
+
 end

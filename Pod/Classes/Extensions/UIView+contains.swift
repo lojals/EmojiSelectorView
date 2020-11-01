@@ -1,6 +1,6 @@
 //
 //  UIView+contains.swift
-//  EmojiSelectorView
+//  ReactionButton
 //
 //  Created by Jorge Ovalle on 29/10/20.
 //

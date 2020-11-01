@@ -1,10 +1,10 @@
 use_frameworks!
 platform :ios, '13.0'
 
-target 'EmojiSelectorView_Example' do
-  pod 'EmojiSelectorView', :path => '../'
+target 'ReactionButton_Example' do
+  pod 'ReactionButton', :path => '../'
 end
 
-target 'EmojiSelectorView_Tests' do
-  pod 'EmojiSelectorView', :path => '../'
+target 'ReactionButton_Tests' do
+  pod 'ReactionButton', :path => '../'
 end

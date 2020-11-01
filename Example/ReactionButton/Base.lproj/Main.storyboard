@@ -11,7 +11,7 @@
         <!--Delegate-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SampleViewController" customModule="EmojiSelectorView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SampleViewController" customModule="ReactionButton_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xat-mh-mMx" customClass="EmojiSelectorView" customModule="EmojiSelectorView">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xat-mh-mMx" customClass="ReactionButton" customModule="ReactionButton">
                                 <rect key="frame" x="127.5" y="418.5" width="120" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
@@ -88,7 +88,7 @@
         <!--Table-->
         <scene sceneID="uHY-zy-B7R">
             <objects>
-                <tableViewController id="fX9-1j-LLq" customClass="SampleTableViewController" customModule="EmojiSelectorView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fX9-1j-LLq" customClass="SampleTableViewController" customModule="ReactionButton_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ygs-78-mgQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-2y-vej" customClass="CustomSelectorView" customModule="EmojiSelectorView_Example" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-2y-vej" customClass="CustomSelectorView" customModule="ReactionButton_Example" customModuleProvider="target">
                                             <rect key="frame" x="16" y="64" width="40" height="40"/>
                                             <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             <constraints>

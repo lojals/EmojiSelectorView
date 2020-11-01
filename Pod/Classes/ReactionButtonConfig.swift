@@ -1,14 +1,14 @@
 //
-//  EmojiSelectorViewConfig.swift
-//  EmojiSelectorView
+//  ReactionButtonConfig.swift
+//  ReactionButton
 //
 //  Created by Jorge R Ovalle Z on 4/6/18.
 //
 
 import CoreGraphics
 
-public extension EmojiSelectorView {
-    /// A type representing the basic configurations for a `EmojiSelectorView`.
+public extension ReactionButton {
+    /// A type representing the basic configurations for a `ReactionButton`.
     struct Config {
 
         /// The space between options.
@@ -30,7 +30,7 @@ public extension EmojiSelectorView {
             size + 2 * spacing
         }
 
-        /// Creates an instance of `JOEmojiableConfig`
+        /// Creates an instance of `JOReactionableConfig`
         ///
         /// - Parameters:
         ///   - spacing: The space between options.
@@ -46,7 +46,7 @@ public extension EmojiSelectorView {
             self.sizeBeforeOpen = 10
         }
 
-        /// A `default` definition of `EmojiSelectorView.Config`.
+        /// A `default` definition of `ReactionButton.Config`.
         public static let `default` = Config(spacing: 6,
                                              size: 40,
                                              minSize: 34,

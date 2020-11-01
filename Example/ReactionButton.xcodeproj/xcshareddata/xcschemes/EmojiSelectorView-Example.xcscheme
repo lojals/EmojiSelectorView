@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "EmojiSelectorView_Example.app"
-               BlueprintName = "EmojiSelectorView_Example"
-               ReferencedContainer = "container:EmojiSelectorView.xcodeproj">
+               BuildableName = "ReactionButton_Example.app"
+               BlueprintName = "ReactionButton_Example"
+               ReferencedContainer = "container:ReactionButton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "EmojiSelectorView_Tests.xctest"
-               BlueprintName = "EmojiSelectorView_Tests"
-               ReferencedContainer = "container:EmojiSelectorView.xcodeproj">
+               BuildableName = "ReactionButton_Tests.xctest"
+               BlueprintName = "ReactionButton_Tests"
+               ReferencedContainer = "container:ReactionButton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "EmojiSelectorView_Example.app"
-            BlueprintName = "EmojiSelectorView_Example"
-            ReferencedContainer = "container:EmojiSelectorView.xcodeproj">
+            BuildableName = "ReactionButton_Example.app"
+            BlueprintName = "ReactionButton_Example"
+            ReferencedContainer = "container:ReactionButton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -56,9 +56,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "EmojiSelectorView_Tests.xctest"
-               BlueprintName = "EmojiSelectorView_Tests"
-               ReferencedContainer = "container:EmojiSelectorView.xcodeproj">
+               BuildableName = "ReactionButton_Tests.xctest"
+               BlueprintName = "ReactionButton_Tests"
+               ReferencedContainer = "container:ReactionButton.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "EmojiSelectorView_Example.app"
-            BlueprintName = "EmojiSelectorView_Example"
-            ReferencedContainer = "container:EmojiSelectorView.xcodeproj">
+            BuildableName = "ReactionButton_Example.app"
+            BlueprintName = "ReactionButton_Example"
+            ReferencedContainer = "container:ReactionButton.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "EmojiSelectorView_Example.app"
-            BlueprintName = "EmojiSelectorView_Example"
-            ReferencedContainer = "container:EmojiSelectorView.xcodeproj">
+            BuildableName = "ReactionButton_Example.app"
+            BlueprintName = "ReactionButton_Example"
+            ReferencedContainer = "container:ReactionButton.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

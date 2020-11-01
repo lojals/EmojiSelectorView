@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import EmojiSelectorView
+import ReactionButton
 
 class Tests: XCTestCase {
 }

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  EmojiSelectorView
+//  ReactionButton
 //
 //  Created by Jorge Ovalle on 02/29/2016.
 //

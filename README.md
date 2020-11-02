@@ -69,10 +69,9 @@ func ReactionSelectorConfiguration(_ selector: ReactionButton) -> ReactionButton
 ```
 You can custom your selector with the following variables, used in the
 
-![Map 1](https://user-images.githubusercontent.com/6756995/38659568-b0955e30-3def-11e8-85fb-317b3f4cbc36.png)
-
 ![New](https://user-images.githubusercontent.com/6756995/97817123-0cac7900-1c60-11eb-8df3-09ba7c19908b.png)
 
+![sizes](https://i.imgur.com/yNfyP3c.png?1)
 
 ## Author
 Jorge Ovalle, jroz9105@gmail.com

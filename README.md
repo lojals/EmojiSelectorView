@@ -6,7 +6,7 @@
 <a href="http://cocoapods.org/pods/ReactionButton"><img src="https://img.shields.io/cocoapods/v/ReactionButton.svg?style=flat"></a>
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-supported-FF00.svg?style=flat"></a>
 <br />
-<a href="https://raw.githubusercontent.com/onevcat/ReactionButton/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/ReactionButton.svg?style=flat"></a>
+<a href="https://raw.githubusercontent.com/lojals/ReactionButton/main/LICENSE"><img src="https://img.shields.io/cocoapods/l/ReactionButton.svg?style=flat"></a>
 <a href="http://cocoadocs.org/docsets/ReactionButton"><img src="https://img.shields.io/cocoapods/p/ReactionButton.svg?style=flat"></a>
 </p>
 
@@ -67,7 +67,7 @@ func ReactionSelectorConfiguration(_ selector: ReactionButton) -> ReactionButton
                         spaceBetweenComponents: 30)
 }
 ```
-You can custom your selector with the following variables, used in the 
+You can custom your selector with the following variables, used in the
 
 ![Map 1](https://user-images.githubusercontent.com/6756995/38659568-b0955e30-3def-11e8-85fb-317b3f4cbc36.png)
 

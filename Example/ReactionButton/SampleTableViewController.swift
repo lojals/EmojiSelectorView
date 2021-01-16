@@ -11,6 +11,16 @@ import ReactionButton
 
 final class SampleTableViewController: UITableViewController {
     
+    var canShowCancelButton: Bool = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if !canShowCancelButton {
+            self.navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -22,6 +32,11 @@ final class SampleTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+    }
+    
+    //MARK: IBActions
+    @IBAction func cancelButtonTapped(sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

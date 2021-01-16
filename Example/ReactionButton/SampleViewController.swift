@@ -28,6 +28,13 @@ final class SampleViewController: UIViewController {
         selectorView.dataSource = self
     }
 
+    //MARK: IBActions
+    @IBAction func presentButtonTapped(sender: UIButton) {
+        let navController = (self.storyboard!.instantiateViewController(identifier: "TableNavigation") as! UINavigationController)
+        let simpleTableController = (navController.viewControllers.first as! SampleTableViewController)
+        simpleTableController.canShowCancelButton = true
+        self.present(navController, animated: true, completion: nil)
+    }
 }
 
 // MARK: ReactionButtonDelegate

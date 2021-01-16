@@ -45,11 +45,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wds-l2-yp1">
+                                <rect key="frame" x="161" y="456" width="53" height="30"/>
+                                <state key="normal" title="Present"/>
+                                <connections>
+                                    <action selector="presentButtonTappedWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Nsj-FG-pP3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xat-mh-mMx" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" multiplier="1.3" id="Awu-hO-FVu"/>
                             <constraint firstItem="MKJ-na-Ra4" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="JCM-b1-ezb"/>
+                            <constraint firstItem="wds-l2-yp1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Zb2-Hq-DZc"/>
+                            <constraint firstItem="wds-l2-yp1" firstAttribute="top" secondItem="Xat-mh-mMx" secondAttribute="bottom" constant="7.5" id="eVh-vt-bKn"/>
                             <constraint firstItem="Xat-mh-mMx" firstAttribute="firstBaseline" secondItem="MKJ-na-Ra4" secondAttribute="baseline" constant="100" id="liC-Dc-vGU"/>
                             <constraint firstItem="MKJ-na-Ra4" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ui3-xQ-YC9"/>
                             <constraint firstItem="Xat-mh-mMx" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="vpJ-gs-Yt7"/>
@@ -77,7 +86,7 @@
                         <color key="selectedImageTintColor" systemColor="systemYellowColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="fX9-1j-LLq" kind="relationship" relationship="viewControllers" id="pa3-Hd-ZD9"/>
+                        <segue destination="OuN-q0-GPo" kind="relationship" relationship="viewControllers" id="pa3-Hd-ZD9"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="UYY-ij-xub"/>
                     </connections>
                 </tabBarController>
@@ -85,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="-910" y="-266"/>
         </scene>
-        <!--Table-->
+        <!--Sample Table View Controller-->
         <scene sceneID="uHY-zy-B7R">
             <objects>
                 <tableViewController id="fX9-1j-LLq" customClass="SampleTableViewController" customModule="ReactionButton_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,9 +153,34 @@
                             <outlet property="delegate" destination="fX9-1j-LLq" id="T3b-jW-0Ia"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Table" image="tablecells.fill" catalog="system" selectedImage="tablecells.fill" id="r65-4y-N1l"/>
+                    <navigationItem key="navigationItem" id="Ezy-Yi-6TW">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Apz-bg-7Zn">
+                            <connections>
+                                <action selector="cancelButtonTappedWithSender:" destination="fX9-1j-LLq" id="guo-Ya-CEU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOi-7z-pzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="-593.25337331334333"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="kzA-P0-qaa">
+            <objects>
+                <navigationController storyboardIdentifier="TableNavigation" automaticallyAdjustsScrollViewInsets="NO" id="OuN-q0-GPo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table" image="tablecells.fill" catalog="system" selectedImage="tablecells.fill" id="r65-4y-N1l"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i6T-d9-9Mg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fX9-1j-LLq" kind="relationship" relationship="rootViewController" id="QD2-zg-Vof"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lwp-3Y-rLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="-593.25337331334333"/>
         </scene>

@@ -43,7 +43,17 @@ open class ReactionButton: UIButton {
     }
     
     private var rootView: UIView? {
-        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController?.view
+        var currentVc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController
+        while let presentedVc = currentVc?.presentedViewController {
+            if let navVc = (presentedVc as? UINavigationController)?.viewControllers.last {
+                currentVc = navVc
+            } else if let tabVc = (presentedVc as? UITabBarController)?.selectedViewController {
+                currentVc = tabVc
+            } else {
+                currentVc = presentedVc
+            }
+        }
+        return currentVc?.view
     }
     
     // MARK: - View lifecycle
